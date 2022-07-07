@@ -1,14 +1,14 @@
 import React from 'react';
-import { Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import classes from './SignIn.module.css';
 const SignIn = (props) => {
 
+  // const navigate = useNavigate();
 
+  // const navigateHandler = () => {
+  //   navigate.push("/signup");
 
-  const switchAuthModeHandler = () => {
-    <Navigate to="/signup"/>
-
-  };
+  // };
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -32,15 +32,17 @@ const SignIn = (props) => {
       </div>
       <div className={classes.actions}>
 
-          <button>Login</button>
+          <button>
+            Login
+          </button>
      
-        <button
+        <Link  to="/signup"
           type='button'
           className={classes.toggle}
-          onClick={switchAuthModeHandler}
+          // onClick={navigateHandler}
         >
           Create new account
-        </button>
+        </Link>
       </div>
     </form>
   </section>

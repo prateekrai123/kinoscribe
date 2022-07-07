@@ -1,8 +1,8 @@
 .signup {
     text-align: center;
     }
-    form {
-    border:2px solid skyblue;
+    .signup_form {
+    border:2px solid rgb(66, 145, 176);
     padding: 30px;
     }
   

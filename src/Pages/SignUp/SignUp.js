@@ -40,7 +40,7 @@ const SignUp = () => {
   return (
     <div className={classes.siginup}>
       <header className={classes.signup_header}>
-        <form onSubmit={(e) => { handleSubmit(e) }}>
+        <form className={classes.signup_form} onSubmit={(e) => { handleSubmit(e) }}>
           <h2> KINOSCRIBE</h2>
           <h3> Sign-up Form </h3>
           <label >
