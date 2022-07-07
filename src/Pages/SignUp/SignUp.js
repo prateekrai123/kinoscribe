@@ -9,6 +9,7 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confPassword, setConfPassword] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
 
 
   const handleChange = (e) => {
@@ -27,6 +28,10 @@ const SignUp = () => {
   const handleConfPasswordChange = (e) => {
     setConfPassword(e.target.value);
   }
+  const handlePhoneNumber = (e) => {
+    setPhoneNumber(e.target.value);
+  }
+
 
   const handleSubmit = (e) => {
     if (password != confPassword) {
@@ -59,6 +64,10 @@ const SignUp = () => {
             Confirm Password:
           </label><br />
           <input type="password" value={confPassword} required onChange={(e) => { handleConfPasswordChange(e) }} /><br />
+          <label>
+            Phone Number
+          </label><br />
+          <input type="number" value={phoneNumber} onChange={(e) => { handlePhoneNumber(e) }} /><br />
           <input type="submit" value="Submit" />
         </form>
       </header>
