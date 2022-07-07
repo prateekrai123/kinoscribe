@@ -50,6 +50,7 @@ const SignUp = () => {
     <div className={classes.siginup}>
       <header className={classes.signup_header}>
         <form
+          className={classes.signup_form}
           onSubmit={(e) => {
             handleSubmit(e);
           }}

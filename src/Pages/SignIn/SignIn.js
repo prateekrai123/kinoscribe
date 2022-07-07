@@ -1,8 +1,8 @@
-import axios from "axios";
 import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
-import classes from "./SignIn.module.css";
+import { Link, Navigate } from "react-router-dom";
 import { baseUrl } from "../../API/api";
+import classes from "./SignIn.module.css";
+import axios from "axios";
 
 const SignIn = (props) => {
   const [email, setEmail] = useState("");
@@ -64,13 +64,14 @@ const SignIn = (props) => {
         <div className={classes.actions}>
           <button onClick={handleSubmit}>Login</button>
 
-          <button
+          <Link
+            to="/signup"
             type="button"
             className={classes.toggle}
-            onClick={switchAuthModeHandler}
+            // onClick={navigateHandler}
           >
             Create new account
-          </button>
+          </Link>
         </div>
       </form>
     </section>
