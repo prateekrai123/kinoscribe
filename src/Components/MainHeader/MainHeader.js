@@ -52,7 +52,7 @@ const MainHeader = () => {
                 <div className="header__middle__menus">
                     <nav className="main-nav " >
 
-                    {/* Responsive Menu Button */}
+                   
                     {isResponsiveclose === true ? <> 
                         <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > <FiX />   </span>
                     </> : <> 
@@ -86,96 +86,7 @@ const MainHeader = () => {
             </div>
 	    </div>
     </header>
-//     const [open, setOpen] = useState(false);
 
-// 	const handleClick = () => {
-// 		setOpen(!open);
-// 	};
-
-// 	const closeMenu = () => {
-// 		setOpen(false);
-// 	}
-
-
-// const [isMenuSubMenu, setMenuSubMenu] = useState(false);
-// const toggleSubmenu = () => {
-//   setMenuSubMenu(isMenuSubMenu === false ? true : false);
-// };
-// let boxClassSubMenu = ["sub__menus"];
-// if(isMenuSubMenu) {
-//     boxClassSubMenu.push('sub__menus__Active');
-// }else {
-//     boxClassSubMenu.push('');
-// }
-
-// 	return (
-// 		<nav className="navbar">
-// 			<Link to="/" className="nav-logo">
-// 				Logo
-// 			</Link>
-//             <Link to="/" className="nav-signIn">
-// 				Logo
-// 			</Link>
-// 			<div onClick={handleClick} className="nav-icon">
-// 				{open ? <FiX /> : <FiMenu />}
-// 			</div>
-            
-// 			<ul className={open ? 'nav-links active' : 'nav-links'}>
-              
-// 				<li className="nav-item">
-// 					<Link to="/" className="nav-link" onClick={closeMenu}>
-// 						Home
-// 					</Link>
-// 				</li>
-//                 <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows nav-item" > <Link to="#" className="nav-link"> Shop <FiChevronDown /> </Link>
-//                             <ul className={boxClassSubMenu.join(' ')} > 
-//                                 <li> <NavLink activeClassName='is-active' className="nav-link" to={`/Online`} onClick={closeMenu}> Online Shop </NavLink> </li>
-//                                 <li><NavLink activeClassName='is-active' className="nav-link" to={`/Offline`} onClick={closeMenu}> Offline Shop </NavLink> </li>
-//                             </ul>
-//                         </li>
-// 				<li className="nav-item">
-// 					<Link to="/contact" className="nav-link" onClick={closeMenu}>
-// 						Contact
-// 					</Link>
-// 				</li>
-// 			</ul>
-// 		</nav>
-
-    //     <header className="header__middle">
-    //     <div className="container">
-    //         <div className="row">
-    //             {/* Add Logo  */}
-    //             <div className="header__middle__logo">
-    //                 <NavLink exact activeClassName='is-active' to="/">
-    //                     <img src={logo} alt="logo" /> 
-    //                 </NavLink>
-    //             </div>
-    //             <div className="header__middle__menus">
-    //                 <nav className="main-nav " >
-    //                 {/* Responsive Menu Button */}
-    //                 {isResponsiveclose === true ? <> 
-    //                     <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > <FiXCircle />   </span>
-    //                 </> : <> 
-    //                     <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass} > <FiAlignRight />   </span>
-    //                 </>}
-    //                 <ul className={boxClass.join(' ')}>
-    //                     <li  className="menu-item" >
-    //                         <NavLink exact activeClassName='is-active' onClick={toggleClass} to={`/`}> Home </NavLink> 
-    //                     </li>
-    //                     <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/About`}> About </NavLink> </li>
-    //                     <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows" > <Link to="#"> Shop <FiChevronDown /> </Link>
-    //                         <ul className={boxClassSubMenu.join(' ')} > 
-    //                             <li> <Link onClick={toggleClass} activeClassName='is-active'  to={`/Online`}> Online Shop </Link> </li>
-    //                             <li><Link activeClassName='is-active' to={`/Offline`}> Offline Shop </Link> </li>
-    //                         </ul>
-    //                     </li>
-    //                     <li className="menu-item " ><NavLink onClick={toggleClass} activeClassName='is-active' to={`/Contact`}> Contact </NavLink> </li>
-    //                 </ul>
-    //                 </nav>     
-    //             </div>   
-    //         </div>
-	//     </div>
-    // </header>
 	);
 };
 
