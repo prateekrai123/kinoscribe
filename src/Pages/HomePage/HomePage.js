@@ -5,7 +5,7 @@ import HeroImage from '../../Images/Project_69-08.jpg';
 const HomePage = () => {
   return (
     <div>
-<MainHeader/>
+
     {/* <section classNameName="container">
   <div classNameName="left-half">
     <article>
