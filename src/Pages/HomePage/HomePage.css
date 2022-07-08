@@ -1,0 +1,140 @@
+/* body {
+    color: #EEEFF3;
+    font-size: 1.25rem;
+  
+
+  }
+  
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 3.2rem;
+    word-spacing: 5px;
+  }
+  p{
+    
+    font-size: 17px;
+    margin-top: -30px;
+    word-spacing: 5px;
+    font-weight: 400px;
+  }
+  
+
+  .container {
+    margin-top: 5rem;
+    display: flex;
+
+  }
+  
+  .left-half {
+    flex: 1;
+    padding: 2.5rem;
+    margin-left: 4.5rem;
+  }
+  
+  .right-half {
+  
+    flex: 1;
+    padding: 1rem;
+  }
+  img{
+    width: 80%;
+  }
+ */
+ /* .container {
+	max-width: 1000px;
+	overflow:hidden;
+}
+.left {
+	padding-bottom: 80%;
+	height: 0;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	width: 66.67%;
+}
+img {
+max-width: 100%;
+}
+.right {
+	padding-bottom: 53.276547842402%;
+	height: 0;
+	overflow: hidden;
+	float: right;
+	width: 33.33%;
+	background-color: green;
+}
+p {
+	color: white;
+	padding: 25px;
+} */
+    
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 7rem;
+
+   /* Should be removed. Only for demonstration */
+  }
+  .left{
+    padding: 2rem 2rem 2rem 6.5rem;
+    color:#EEEFF3 ;
+  }
+  
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+   
+  }
+  h1{
+    font-size: 3.2rem;
+    word-spacing: 5px;
+  }
+  p{
+    
+    font-size: 17px;
+    margin-top: 15px;
+    word-spacing: 5px;
+    font-weight: 400px;
+  }
+  img{
+    width: 80%;
+  }
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .column {
+      width: 100%;
+    margin-top: 2rem;
+    }
+    .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    h1{
+        font-size: 1.7rem;
+        word-spacing: 2px;
+      }
+      p{
+        
+        font-size: 14px;
+        /* margin-top: 2px; */
+        word-spacing: 5px;
+        font-weight: 300px;
+      }
+      img{
+        width: 90%;
+        padding-left: 1.5rem;
+  
+      }
+      .left{
+        padding: 0 1.5rem;
+        color:#EEEFF3 ;
+      }
+  }
