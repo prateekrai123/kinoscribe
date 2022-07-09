@@ -37,7 +37,7 @@ const MainHeader = () => {
 
   return (
     <header className="header__middle">
-      <div className="container">
+      <div className="header-container">
         <div className="row">
           {/* Add Logo  */}
           <div className="header__middle__logo">
