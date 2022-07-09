@@ -82,14 +82,14 @@ color: #EEEFF3;
 		display: flex;
 	}
 } */
-/* body {
+body {
   margin: auto;
   padding: 0px;
   overflow-x: hidden;
   background-repeat: repeat;
   font-family: 'Inter', sans-serif;
   display: grid;
-} */
+}
 .container {
   width: 100%;
 	padding-right:15px;
@@ -175,13 +175,13 @@ li {
   padding: 36px 3px 27px 3px;
   border-left: 1px solid lavender;
 }
-.header__middle {
+/* .header__middle {
   display: flex;
   width: 100%;
   float: left;
   border-bottom: 1px dashed lavender;
   position: relative;
-}
+} */
 .header__middle__logo > a > h1 {
   color: #07a8ff;
   text-transform: uppercase;
