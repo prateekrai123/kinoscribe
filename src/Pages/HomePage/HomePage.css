@@ -1,0 +1,55 @@
+.float-container {
+   margin-top: 2rem;
+    padding: 10px;
+}
+.home-img{
+    width: 110%;
+    position: relative;
+    left: 150px; 
+  
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 10px;
+    /* border: 2px solid red; */
+} 
+
+.right{
+    position: relative;
+    left: -75px;
+    margin-top: 5rem;
+    color: white;
+
+   
+}
+.right h1{
+    font-size: 60px;
+}
+.home-form-button {
+    background: #31343C;
+    border: 2px solid #31343C;
+    border-radius: 50px;
+    padding: 10px;
+    width: 30%;
+    color:#F9FAFB ;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 10px;
+    margin-top: 30px;
+  }
+  
+  .home-form-button:hover {
+    color: #FEDD58;
+  }
+
+@media screen and (max-width: 900px) {
+.float-child{
+    width: 100%;
+    float: left;
+    padding: 40px;
+}
+
+}

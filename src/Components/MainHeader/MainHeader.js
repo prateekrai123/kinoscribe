@@ -42,7 +42,7 @@ const MainHeader = () => {
           {/* Add Logo  */}
           <div className="header__middle__logo">
             <NavLink exact activeClassName="is-active" to="/">
-              <img src={logo} alt="logo"  />
+              <img className = "logo" src={logo} alt="logo"  />
             </NavLink>
           </div>
 

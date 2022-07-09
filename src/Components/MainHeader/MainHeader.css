@@ -97,7 +97,7 @@ body {
 	margin-right:auto;
 	margin-left:auto
 }
-img {
+.logo {
   max-width: 100px;
   height:auto;
 }
@@ -115,7 +115,7 @@ img {
   color: #07a8ff;
   font-family: 'Inter', sans-serif;
 } */
-.navBar .logo img {
+.navBar .logo  {
   float: left;
   max-height: 100px;
 }
