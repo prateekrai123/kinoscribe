@@ -42,7 +42,7 @@ const MainHeader = () => {
           {/* Add Logo  */}
           <div className="header__middle__logo">
             <NavLink exact activeClassName="is-active" to="/">
-              <img src={logo} alt="logo" style={{ width: "50px" }} />
+              <img src={logo} alt="logo"  />
             </NavLink>
           </div>
 
@@ -83,16 +83,6 @@ const MainHeader = () => {
                     {" "}
                     Home{" "}
                   </NavLink>
-                </li>
-                <li className="menu-item ">
-                  <NavLink
-                    onClick={toggleClass}
-                    activeClassName="is-active"
-                    to={`/About`}
-                  >
-                    {" "}
-                    About{" "}
-                  </NavLink>{" "}
                 </li>
                 <li
                   onClick={toggleSubmenu}
@@ -137,7 +127,20 @@ const MainHeader = () => {
                     Contact{" "}
                   </NavLink>{" "}
                 </li>
+                <li className="menu-item menu_signin">
+                  <NavLink
+                    onClick={toggleClass}
+                    activeClassName="is-active"
+                    to={`/signin`}
+                  >
+                    {" "}
+                    Sign in{" "}
+                  </NavLink>{" "}
+                </li>
+             
               </ul>
+               
+              
             </nav>
           </div>
         </div>

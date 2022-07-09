@@ -1,5 +1,4 @@
 import React from "react";
-// import MainHeader from '../../Components/MainHeader/MainHeader';
 import "./HomePage.css";
 import MainImage from "../../Images/logo.png";
 const HomePage = () => {
