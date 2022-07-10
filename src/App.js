@@ -8,12 +8,11 @@ import SignUp from "./Pages/SignUp/SignUp";
 const App = () => {
   return (
     <main>
-  
       <Router>
-      <MainHeader/>
-       <Routes>
+        <MainHeader />
+        <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="Contact" element={<ContactUs/>} />
+          <Route path="Contact" element={<ContactUs />} />
           <Route path="/signin" element={<SignIn />} />
 
           <Route path="/signup" element={<SignUp />} />
