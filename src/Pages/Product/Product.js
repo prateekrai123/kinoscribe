@@ -24,9 +24,18 @@ const Product = () => {
                     Secure Traction: Exaggerated herringbone-pattern outsole offers traction on a variety of surfaces.
                 </p>
                 <p className="product-product-colors">
-                    Enter word count  
+                    Enter word count:  
                     <input type="number"/> 
+                    <br/>
+                    <br/>
+                    <label for="img">Select image:</label>
+                    <input type="file" id="img" name="img" accept="image/*"/>
+                    {/* <input type="submit"></input> */}
+                   
+                    
                 </p>
+                
+                
                 
                 <h3>Rs. 12,800</h3>
                 <button>Buy Now</button>

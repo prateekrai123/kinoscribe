@@ -8,6 +8,7 @@ a{
 	/* height: 90vh; */
 	display: flex;
 	flex-direction: column;
+    /* flex-wrap: wrap; */
 	justify-content: space-evenly;
 	align-items: center;
 }
@@ -30,6 +31,7 @@ a{
 .s-box-container{
 	width:100%;
 	display: flex;
+    flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 }

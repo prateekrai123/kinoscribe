@@ -2,6 +2,7 @@ import React from "react";
 import "./HomePage.css";
 import MainImage from "../../Images/855-removebg.png";
 import Services from "../Services/Services";
+import Testimonial from "../../Components/Testimonial/Testimonial";
 const HomePage = () => {
   return (
     <div>
@@ -31,7 +32,9 @@ const HomePage = () => {
         </div>
       </div>
       <Services />
+      {/* <Testimonial/> */}
     </div>
+
   );
 };
 

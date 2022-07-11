@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./Components/Footer/Footer";
 import MainHeader from "./Components/MainHeader/MainHeader";
-import ContactUS from "./Pages/ContactUs/ContactUs";
+import ContactUS from "./Pages/ContactUs/ContactUS";
 import HomePage from "./Pages/HomePage/HomePage";
 import Product from "./Pages/Product/Product";
 import SignIn from "./Pages/SignIn/SignIn";
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/product" element={<Product />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
+        <Footer/>
       </Router>
     </main>
   );

@@ -13,14 +13,14 @@ body {
 .product-container {
     position: relative;
     display: flex;
-   
+    min-height: 70vh;;
     flex-wrap: wrap;
     justify-content: space-between;
     /* width: 900px; */
     /* height: 600px; */
     /* background: #fff; */
-    background: #212121;
-    margin: 20px;
+    background: #222222;
+    margin: 80px;
 }
 
 .product-container .product-imgBx {
@@ -30,7 +30,7 @@ body {
     align-items: center;
     width: 50%;
     height: 100%;
-    background: #212121;
+    background: #222222;
     transition: .product-3s linear;
 }
 
@@ -39,7 +39,7 @@ body {
     position: absolute;
     top: 0px;
     left: 24px;
-    color: #000;
+    color: white;
     opacity: 0.product-2;
     font-size: 8em;
     font-weight: 800;
@@ -64,37 +64,37 @@ body {
 }
 
 .product-container .product-details h2{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-size: 2.product-4em;
     line-height: 1em;
-    color: #444;
+    color: white;
 }
 
 .product-container .product-details h2 span {
     font-size: 0.product-4em;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #999;
+    color: white;
 }
 
 .product-container .product-details p {
     max-width: 85%;
-    margin-left: 15%;
-    color: #333;
+    /* margin-left: 15%; */
+    color: white;
     font-size: 15px;
     margin-bottom: 36px;
 }
 
 .product-container .product-details h3 {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-size: 2.product-5em;
     color: #a2a2a2;
     float: left;
 }
 .product-container .product-details button {
-    background: #000;
+    background: #31343C;
     color: #fff;
     border: none;
     outline: none;
