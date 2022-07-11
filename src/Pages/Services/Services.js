@@ -1,55 +1,118 @@
-import React from 'react'
-import './Services.css';
+import React from "react";
+import "./Services.css";
 const Services = () => {
   return (
     <section class="services">
+      <div class="s-heading">
+        <h1>
+          Ser<font color="#FFDD59">vic</font>es
+        </h1>
+        <p>We Provide The Best In Class Servies For Our Customers</p>
+      </div>
 
-	<div class="s-heading">
-	<h1>Ser<font color="#FFDD59">vic</font>es</h1>
-	<p>We Provide The Best In Class Servies For Our Customers</p>
-	</div>
+      <div class="s-box-container">
+        <div class="s-box">
+          <div class="bar"></div>
 
-	<div class="s-box-container">
+          <img alt="1" src="images/1.png" />
 
-	<div class="s-box">
+          <h1>Captions</h1>
 
-	<div class="bar"></div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-	<img alt="1" src="images/1.png" />
+          <a class="s-btn" href="#">
+            More
+          </a>
+        </div>
 
-	<h1>Spend Money</h1>
+        <div class="s-box">
+          <div class="bar"></div>
 
-		<p>Track on your all daily expense and make your day to life easier.</p>
+          <img alt="2" src="images/2.png" />
 
-	<a class="s-btn" href="#">More</a>
-	</div>
-		
-	<div class="s-box">
+          <h1>Translation</h1>
 
-	<div class="bar"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          </p>
 
-	<img alt="2" src="images/2.png" />
+          <a class="s-btn" href="#">
+            More
+          </a>
+        </div>
 
-	<h1>Set Budget</h1>
+        <div class="s-box">
+          <div class="bar"></div>
 
-		<p>Make a Budget That Fit Right With You And Can Do Most With It</p>
+          <img alt="2" src="images/2.png" />
+          <h1>Proofreading</h1>
 
-	<a class="s-btn" href="#">More</a>
-	</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          </p>
+          <a class="s-btn" href="#">
+            More
+          </a>
+        </div>
 
-	<div class="s-box">
+        <div class="s-box">
+          <div class="bar"></div>
 
-	<div class="bar"></div>
+          <img alt="2" src="images/2.png" />
+          <h1>Captions+Translation</h1>
 
-    <img alt="2" src="images/2.png" />
-	<h1>Security</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          </p>
+          <a class="s-btn" href="#">
+            More
+          </a>
+        </div>
 
-		<p>We Store All Card Info And Money Safe To Make You Relax And Crazy</p>
-	<a class="s-btn" href="#">More</a>
-	</div>
-	</div>
-	</section>
-  )
-}
+        <div class="s-box">
+          <div class="bar"></div>
 
-export default Services
+          <img alt="2" src="images/2.png" />
+          <h1>Caption+Proofreading</h1>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          </p>
+          <a class="s-btn" href="#">
+            More
+          </a>
+        </div>
+
+        <div class="s-box">
+          <div class="bar"></div>
+
+          <img alt="2" src="images/2.png" />
+          <h1>Translation+Proofreading</h1>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          </p>
+          <a class="s-btn" href="#">
+            More
+          </a>
+        </div>
+
+        <div class="s-box">
+          <div class="bar"></div>
+
+          <img alt="2" src="images/2.png" />
+          <h1>Captions+Translation+Proofreading</h1>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          </p>
+          <a class="s-btn" href="#">
+            More
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
