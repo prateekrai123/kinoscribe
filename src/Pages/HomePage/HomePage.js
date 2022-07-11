@@ -1,8 +1,10 @@
 import React from "react";
 import "./HomePage.css";
-import MainImage from "../../Images/855-removebg.png";
+import MainImage from "../../Images/Project_69-08.jpg";
 import Services from "../Services/Services";
-import Testimonial from "../../Components/Testimonial/Testimonial";
+
+// import Testimonial from "../../Components/Testimonial/Testimonial";
+
 const HomePage = () => {
   return (
     <div>

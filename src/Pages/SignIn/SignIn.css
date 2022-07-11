@@ -84,7 +84,7 @@
   
   .signin-form-group.buttons {
     margin-bottom: 0;
-    text-align: right;
+    /* text-align: right; */
   }
   
   .signin-form-control {
@@ -115,7 +115,7 @@
     font-size: 14px;
     cursor: pointer;
     outline: none;
-    margin-left: 6px;
+    /* margin-left: 6px; */
   }
   
   .signin-form-button:hover {
@@ -125,12 +125,12 @@
     background: #31343C;
     border: 2px solid #31343C;
     border-radius: 50px;
-    padding: 10px 30px;
+    padding: 6px 25px;
     color:#F9FAFB ;
     font-size: 20px;
     cursor: pointer;
     outline: none;
-    margin-left: 7px;
+    /* margin-left: 7px; */
   }
 
   
@@ -160,6 +160,10 @@
   
     .signin-screen-body-item {
       padding: 0;
+    }
+    .sigin-button{
+      width: 100%;
+      /* margin-left: -6px; */
     }
   }
   

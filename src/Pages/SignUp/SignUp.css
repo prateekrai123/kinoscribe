@@ -9,7 +9,7 @@ body, button, input {
 
 .signup-background {
   display: flex;
-  min-height: 80vh;
+  min-height: 95vh;
 }
 
 .signup-container {
