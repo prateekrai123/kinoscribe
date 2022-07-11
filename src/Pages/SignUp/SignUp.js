@@ -138,7 +138,7 @@ const SignUp = (props) => {
               
             </div>
           </div>
-          <div className="screen-body-item">
+          <div className="signup-screen-body-item">
             <div className="signup-form">
               <div className="signup-form-group">
                 <input

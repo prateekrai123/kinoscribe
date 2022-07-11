@@ -36,10 +36,9 @@ const MainHeader = () => {
   }
 
   return (
-    <header className="header__middle">
+    <header style = {{ backgroundColor: "#121212"}} className="header__middle">
       <div className="header-container">
         <div className="row">
-          {/* Add Logo  */}
           <div className="header__middle__logo">
             <NavLink exact activeClassName="is-active" to="/">
               <img className = "logo" src={logo} alt="logo"  />
@@ -91,7 +90,7 @@ const MainHeader = () => {
                   {" "}
                   <Link to="#">
                     {" "}
-                    Shop <FiChevronDown />{" "}
+                    Services <FiChevronDown />{" "}
                   </Link>
                   <ul className={boxClassSubMenu.join(" ")}>
                     <li>

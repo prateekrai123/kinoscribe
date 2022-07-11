@@ -1,44 +1,68 @@
-.float-container {
-   margin-top: 2rem;
-    padding: 10px;
+.home-background{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
 }
-.home-img{
-    width: 110%;
-    position: relative;
-    left: 150px; 
-  
+  .home-container{
+    flex: 0 1px 1100px;
+    margin: auto;
+    /* padding: 10px; */
+  }
+.float-container {
+    display: flex;
+    /* justify-content: center; */
+   /* margin-top: 2rem;
+    padding: 10px; */
+    gap: 15px;
+
+}
+.home-img {
+    width: 800px;
+    padding-left: 30px;
+    /* margin-top: -10px; */
+    /* top:-305px; */
 }
 
 .float-child {
+   
     width: 50%;
-    float: left;
-    padding: 10px;
-    /* border: 2px solid red; */
+    /* float: left; */
+    padding: 20px;
+    border: 2px solid red;
 } 
 
-.right{
-    position: relative;
-    left: -75px;
-    margin-top: 5rem;
+.left{
+    /* position: relative; */
+    /* left: -75px; */
+    padding-top: 7rem;
     color: white;
 
    
 }
-.right h1{
-    font-size: 60px;
+.left h1{
+    font-size: 3rem;
+}
+.left p {
+    font-size: 1rem;
+    margin: 25px 2px;
+}
+.home-form-group{
+    display: flex;
 }
 .home-form-button {
+  
     background: #31343C;
     border: 2px solid #31343C;
     border-radius: 50px;
-    padding: 10px;
-    width: 30%;
+    padding: 9px;
+    width: 35%;
     color:#F9FAFB ;
     font-size: 20px;
     cursor: pointer;
     outline: none;
-    margin-left: 10px;
-    margin-top: 30px;
+    margin-right: 15px;
+    /* margin-left: 10px; */
+    /* margin-top: 30px; */
   }
   
   .home-form-button:hover {
@@ -46,10 +70,46 @@
   }
 
 @media screen and (max-width: 900px) {
-.float-child{
+    .home-container{
+        flex: 0 1px 800px;
+        margin: auto;
+        padding: 10px;
+      }
+    .float-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .float-child{
     width: 100%;
-    float: left;
-    padding: 40px;
+    /* float: left; */
+    /* padding: 40px; */
+}
+.left{
+    padding: 1rem;
+}
+.left h1{
+    font-size: 20px;
+}
+.left p{
+    font-size: 14px;
+}
+.home-img{
+    /* display: flex; */
+    /* align-self: center; */
+    /* justify-content: center; */
+    width: 100%;
+    /* position: relative; */
+    /* margin-left: 30px;  */
+    /* align-items: center; */
+  
+}
+.home-form-group{
+    display: flex;
+    flex-direction: column;
+}
+.home-form-button{
+    width: 100%;
+    margin-top: 10px;
 }
 
 }

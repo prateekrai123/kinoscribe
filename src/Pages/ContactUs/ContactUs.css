@@ -1,10 +1,13 @@
 
-  
+  body{
+    background-color: #1E1E1E;
+  }
 
   
   .background {
     display: flex;
-    min-height: 70vh;
+    /* min-height: 70vh; */
+    
   }
   
   .container {
@@ -15,8 +18,8 @@
   
   .screen {
     position: relative;
-    background: #3e3e3e;
-    border-radius: 15px;
+    background: #222222;
+    border-radius: 15px
   }
   
   .screen:after {
@@ -69,7 +72,7 @@
   .app-contact {
     margin-top: auto;
     font-size: 8px;
-    color: #888;
+    color: #FEDD58;
   }
   
   .app-form-group {
@@ -120,30 +123,7 @@
     color: #FEDD58;
   }
   
-  .credits {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    color: #FEDD58;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-  }
-  
-  .credits-link {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .dribbble {
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-  }
+
   
   @media screen and (max-width: 520px) {
     .screen-body {
