@@ -165,7 +165,7 @@ const MainHeader = () => {
                   <NavLink
                     onClick={toggleClass}
                     activeClassName="is-active"
-                    to={`/Contact`}
+                    to={`/contact`}
                   >
                     {" "}
                     Contact{" "}
