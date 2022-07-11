@@ -36,12 +36,12 @@ const MainHeader = () => {
   }
 
   return (
-    <header style = {{ backgroundColor: "#121212"}} className="header__middle">
+    <header style={{ backgroundColor: "#121212" }} className="header__middle">
       <div className="header-container">
         <div className="row">
           <div className="header__middle__logo">
             <NavLink exact activeClassName="is-active" to="/">
-              <img className = "logo" src={logo} alt="logo"  />
+              <img className="logo" src={logo} alt="logo" />
             </NavLink>
           </div>
 
@@ -101,17 +101,62 @@ const MainHeader = () => {
                         to={`/Online`}
                       >
                         {" "}
-                        Online Shop{" "}
+                        Captions{" "}
                       </NavLink>{" "}
                     </li>
                     <li>
+                      {" "}
                       <NavLink
                         onClick={toggleClass}
                         activeClassName="is-active"
-                        to={`/Offline`}
+                        to={`/Online`}
                       >
                         {" "}
-                        Offline Shop{" "}
+                        Translation{" "}
+                      </NavLink>{" "}
+                    </li>
+                    <li>
+                      {" "}
+                      <NavLink
+                        onClick={toggleClass}
+                        activeClassName="is-active"
+                        to={`/Online`}
+                      >
+                        {" "}
+                        Proofreading{" "}
+                      </NavLink>{" "}
+                    </li>
+                    <li>
+                      {" "}
+                      <NavLink
+                        onClick={toggleClass}
+                        activeClassName="is-active"
+                        to={`/Online`}
+                      >
+                        {" "}
+                        Captions+Translation{" "}
+                      </NavLink>{" "}
+                    </li>
+                    <li>
+                      {" "}
+                      <NavLink
+                        onClick={toggleClass}
+                        activeClassName="is-active"
+                        to={`/Online`}
+                      >
+                        {" "}
+                        Translation+Proofreading{" "}
+                      </NavLink>{" "}
+                    </li>
+                    <li>
+                      {" "}
+                      <NavLink
+                        onClick={toggleClass}
+                        activeClassName="is-active"
+                        to={`/Online`}
+                      >
+                        {" "}
+                        Caption+Translation+Proofreading{" "}
                       </NavLink>{" "}
                     </li>
                   </ul>
@@ -136,10 +181,7 @@ const MainHeader = () => {
                     Sign in{" "}
                   </NavLink>{" "}
                 </li>
-             
               </ul>
-               
-              
             </nav>
           </div>
         </div>
