@@ -1,46 +1,51 @@
 import React from 'react';
 
 import './Product.css';
-import product_img from '../../Images/965.AI processor.jpg'
-
+import DropFileInput from '../../Components/DropFileInput/DropFileInput';
 const Product = () => {
   return (
+    <div className='product-background'>
+      <div className="product-heading">
+        <h1>Subscription</h1>
+        </div>
+        <div>  
+    <div className="product-flex-container">
+  <div className="product-flex product-flex-left">
+    <h2>This has content in the left box.</h2><br/>
+    <p> Learn from experts and network through events, join clubs and
+                learn real life skills, Hang out on our discord server to make
+                new friends and have fun!
+                Learn from experts and network through events, join clubs and
+                learn real life skills, Hang out on our discord server to make
+                new friends and have fun!
+                Learn from experts and network through events, join clubs and
+                Learn from experts and network through events, join clubs and
+                learn real life skills, Hang out on our discord server to make
+                new friends and have fun!
+                 </p>
+  </div>
+  <div className="product-flex product-flex-right">
+    <form>
     <div>
-         <div className="product-container">
-        <div className="product-imgBx">
-            <img src={product_img} alt="Nike Jordan Proto-Lyte "/>
-        </div>
-        <div className="product-details">
-            <div className="product-content">
-                <h2>Jordan Proto-Lyte <br/>
-                    <span>Running Collection</span>
-                </h2>
-                <p>
-                    Featuring soft foam cushioning and lightweight, woven fabric in the upper, the Jordan Proto-Lyte is
-                    made for all-day, bouncy comfort.
-                    Lightweight Breathability: Lightweight woven fabric with real or synthetic leather provides
-                    breathable support.
-                    Cushioned Comfort: A full-length foam midsole delivers lightweight, plush cushioning.
-                    Secure Traction: Exaggerated herringbone-pattern outsole offers traction on a variety of surfaces.
-                </p>
-                <p className="product-product-colors">
-                    Enter word count:  
-                    <input type="number"/> 
-                    <br/>
-                    <br/>
-                    <label for="img">Select image:</label>
-                    <input type="file" id="img" name="img" accept="image/*"/>
-                    {/* <input type="submit"></input> */}
-                   
-                    
-                </p>
-                
-                
-                
-                <h3>Rs. 12,800</h3>
-                <button>Buy Now</button>
-            </div>
-        </div>
+        <h3>Enter your word count:</h3>
+        <input className='product-input-control' type= "number" placeholder='word count'></input>
+    </div>
+    <br/>
+    <div>
+    <h3>Upload image:</h3>
+    <br/>
+    </div>
+    <div>
+    <DropFileInput/>
+    <br/>
+    <button className='product-button'>Submit</button>
+    </div>
+    </form>
+  </div>
+ 
+</div>
+    
+    
     </div>
     </div>
   )

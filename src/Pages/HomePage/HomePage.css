@@ -1,7 +1,7 @@
 .home-background{
     display: flex;
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
 }
   .home-container{
     /* flex: 0 1px 1100px; */
@@ -19,7 +19,7 @@
 .home-img {
     width: 70%;
     /* padding-left: 30px; */
-    margin-top: 95px;
+    margin-top: 75px;
     /* top:-305px; */
 }
 
@@ -34,8 +34,8 @@
 .left{
     /* position: relative; */
     /* left: -75px; */
-    padding-top: 7rem;
-    padding-left: 5rem;
+    padding-top: 4rem;
+    padding-left: 7rem;
     color: white;
 
    
