@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import Navigation from "./Components/MainHeader/Navigation";
+import Adminpanel from "./Pages/Admin/Admin";
+// import Admin from "./Pages/Admin/Admin";
 import ContactUS from "./Pages/ContactUs/ContactUS";
 import HomePage from "./Pages/HomePage/HomePage";
 import Product from "./Pages/Product/Product";
@@ -12,16 +14,17 @@ const App = () => {
   return (
     <main>
       <Router>
-        <Navigation/>
+        {/* <Navigation/> */}
         {/* <MainHeader /> */}
         <Routes>
+        <Route path="/admin" element={<Adminpanel />} />
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<ContactUS />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/product" element={<Product />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
       </Router>
     </main>
   );

@@ -8,7 +8,7 @@ a{
 	/* height: 90vh; */
 	display: flex;
 	flex-direction: column;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: center;
 }
@@ -20,7 +20,8 @@ a{
 	font-size: 3rem;
 	font-weight: 400;
 	letter-spacing: 1px;
-	margin: 0px;
+
+    
 }
 .s-heading p{
 	color: #c8cacf;
@@ -56,15 +57,25 @@ a{
 	height: 75px;
 }
 .s-box h1{
+    text-align: center;
+    position: relative;
 	color:#F2F3F7;
 	letter-spacing: 1px;
 	font-size: 1.5rem;
 	margin-bottom: 8px;
-	
+    overflow: visible;
+    text-overflow: ellipsis;
+    /* flex-wrap: wrap; */
 }
 .s-box p{
+
 	color: #c8cacf;
 	text-align: center;
+}
+.content{
+    /* width: 80%; */
+    /* height: 990px; */
+    flex-wrap: wrap;
 }
 .s-btn{
 	width: 140px;
@@ -125,6 +136,12 @@ a{
 	.s-box{
 		flex-grow: 1;
         width:250px;
+        overflow-x: hidden;
+
 	}
+    .s-box h1{
+        font-size: 1.2rem;
+    }
+   
 	
 }

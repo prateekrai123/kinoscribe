@@ -101,8 +101,9 @@ const Services = () => {
           <div class="bar"></div>
 
           <img alt="2" src="images/2.png" />
-          <h1>Captions+Trans+Proo</h1>
-
+          <div className="content">
+          <h1>Captions+Translation+Proofreading</h1>
+          </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
