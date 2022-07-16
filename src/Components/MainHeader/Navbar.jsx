@@ -34,12 +34,15 @@ const Navbar = ({ toggleDrawer, routes }) => {
               );
             })}
           </NavRoutes>
-          {localStorage.getItem("token")===undefined || localStorage.getItem("token")==="" && <LoginButton onClick={() => {
+          {/* {localStorage.getItem("token")===undefined || localStorage.getItem("token")==="" && <LoginButton onClick={() => {
             window.location.href = "/signin";
           }}>Login</LoginButton>}
           {localStorage.getItem("token")!==undefined && localStorage.getItem("token")!=="" && <LogOutButton onClick={() => {
             window.location.href = "/signout";
-          }}>Login</LogOutButton>}
+          }}>Login</LogOutButton>} */}
+          <LoginButton onClick={() => {
+            window.location.href = "/signin";
+          }}>Login</LoginButton>
         </RightNav>
       </NavContainer>
     </SNavbar>
