@@ -20,9 +20,17 @@ const Services = () => {
 
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-          <a class="s-btn" href="#">
+          {/* <a class="s-btn" href="#">
             More
-          </a>
+          </a> */}
+          <button
+            class="s-btn"
+            onClick={() => {
+              window.location.href = "/product?product=caption";
+            }}
+          >
+            More
+          </button>
         </div>
 
         <div class="s-box">
@@ -36,9 +44,14 @@ const Services = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
 
-          <a class="s-btn" href="#">
+          <button
+            class="s-btn"
+            onClick={() => {
+              window.location.href = "/product?product=translation";
+            }}
+          >
             More
-          </a>
+          </button>
         </div>
 
         <div class="s-box">
@@ -50,9 +63,14 @@ const Services = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
-          <a class="s-btn" href="#">
+          <button
+            class="s-btn"
+            onClick={() => {
+              window.location.href = "/product?product=proofreading";
+            }}
+          >
             More
-          </a>
+          </button>
         </div>
 
         <div class="s-box">
@@ -64,9 +82,14 @@ const Services = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
-          <a class="s-btn" href="#">
+          <button
+            class="s-btn"
+            onClick={() => {
+              window.location.href = "/product?product=caption+translation";
+            }}
+          >
             More
-          </a>
+          </button>
         </div>
 
         <div class="s-box">
@@ -78,9 +101,14 @@ const Services = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
-          <a class="s-btn" href="#">
+          <button
+            class="s-btn"
+            onClick={() => {
+              window.location.href = "/product?product=caption+proofreading";
+            }}
+          >
             More
-          </a>
+          </button>
         </div>
 
         <div class="s-box">
@@ -92,9 +120,15 @@ const Services = () => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
-          <a class="s-btn" href="#">
+          <button
+            class="s-btn"
+            onClick={() => {
+              window.location.href =
+                "/product?product=translation+proofreading";
+            }}
+          >
             More
-          </a>
+          </button>
         </div>
 
         <div class="s-box">
@@ -102,14 +136,22 @@ const Services = () => {
 
           <img alt="2" src="images/2.png" />
           <div className="content">
-          <h1>Captions+Translation+Proofreading</h1>
+            <h1>
+              Captions+Translation<br></br>+Proofreading
+            </h1>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           </p>
-          <a class="s-btn" href="#">
+          <button
+            class="s-btn"
+            onClick={() => {
+              window.location.href =
+                "/product?product=caption+translation+proofreading";
+            }}
+          >
             More
-          </a>
+          </button>
         </div>
       </div>
     </section>

@@ -4,7 +4,13 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import logo from "../../Images/logo.png"
 import Menu from "./Menu";
+import userContext from "../../context/UserContext";
+
+
 const Navbar = ({ toggleDrawer, routes }) => {
+  const user = userContext
+  console.log(user)
+
   return (
     <SNavbar>
       <NavContainer>
@@ -28,7 +34,12 @@ const Navbar = ({ toggleDrawer, routes }) => {
               );
             })}
           </NavRoutes>
-          <LoginButton>Login</LoginButton>
+          {localStorage.getItem("token")===undefined && <LoginButton onClick={() => {
+            window.location.href = "/signin";
+          }}>Login</LoginButton>}
+          {localStorage.getItem("token")!==undefined && <LogOutButton onClick={() => {
+            window.location.href = "/signout";
+          }}>Login</LogOutButton>}
         </RightNav>
       </NavContainer>
     </SNavbar>
@@ -113,6 +124,30 @@ const NavRoute = styled(Link)`
 `;
 
 const LoginButton = styled.button`
+@media (max-width: 900px) {
+  padding: 0.6rem 2rem;
+  font-size : 11px;
+  // display: none;
+}
+  padding: 0 3rem;
+  // height: 30%;
+  
+  font-size: 13px;
+  background-color: #FFDD59;
+  border: 1px solid #FFDD59;
+  border-radius: 50px;
+  transition: 0.3s ease;
+  cursor : pointer;
+
+  &:hover {
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+    color:white;
+    box-shadow: 0px 0px 10px black;
+  }
+`;
+
+const LogOutButton = styled.button`
 @media (max-width: 900px) {
   padding: 0.6rem 2rem;
   font-size : 11px;

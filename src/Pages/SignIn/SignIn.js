@@ -3,141 +3,110 @@ import { Link } from "react-router-dom";
 import { baseUrl } from "../../API/api";
 import "./SignIn.css";
 import axios from "axios";
+import userContext from "../../context/UserContext";
 
 const SignIn = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
+    setIsLoading(true);
     e.preventDefault();
     axios
       .post(`${baseUrl}/auth/signIn`, { email, password })
       .then((res) => {
+        setIsLoading(false);
         console.log(res);
         if (res.isError) {
           alert(res.data.message);
+          userContext.loginHandler({
+            token: res.data.token,
+            isAdmin: res.data.isAdmin,
+          });
+          console.log(userContext);
         } else {
           alert(res.data.message);
+          localStorage.setItem("token", res.data.token);
+          localStorage.setItem("userId", res.data.userId);
+          window.location.href = "/";
         }
       })
       .catch((err) => {
+        setIsLoading(false);
         console.log(err);
         alert(err);
       });
   };
 
-  // const switchAuthModeHandler = () => {
-  //   <Navigate to="/signin" />;
-  // };
-
   const submitHandler = (event) => {
     event.preventDefault();
   };
   return (
-    // <section className={classes.signin}>
-    //   <h1>Login</h1>
-    //   <form onSubmit={submitHandler}>
-    //     <div className={classes.control}>
-    //       <label htmlFor="email">Your Email</label>
-    //       <input
-    //         type="email"
-    //         id="email"
-    //         required
-    //         value={email}
-    //         onChange={(e) => {
-    //           setEmail(e.target.value);
-    //         }}
-    //       />
-    //     </div>
-    //     <div className={classes.control}>
-    //       <label htmlFor="password">Your Password</label>
-    //       <input
-    //         type="password"
-    //         id="password"
-    //         required
-    //         value={password}
-    //         onChange={(e) => {
-    //           setPassword(e.target.value);
-    //         }}
-    //       />
-    //     </div>
-    //     <div className={classes.actions}>
-    //       <button onClick={handleSubmit}>Login</button>
-
-    //       <Link
-    //         to="/signin"
-    //         type="button"
-    //         className={classes.toggle}
-    //         // onClick={navigateHandler}
-    //       >
-    //         Create new account
-    //       </Link>
-    //     </div>
-    //   </form>
-    // </section>
     <form onSubmit={submitHandler}>
-    <div className="signin-background">
-    <div className="signin-container">
-      <div className="signin-screen">
-  
-        <div className="signin-screen-body">
-          <div className="signin-screen-body-item left">
-            <div className="signin-title">
-              <span>Signin</span>
-              
-            </div>
-          </div>
-          <div className="screen-body-item">
-            <div className="signin-form">
-      
-              <div className="signin-form-group">
-                <input 
-                className="signin-form-control" 
-                placeholder="EMAIL"
-                type="email"
-                id="email"
-                        required
-                        value={email}
-                        onChange={(e) => {
-                          setEmail(e.target.value);
-                        }} 
-                      />
+      <div className="signin-background">
+        <div className="signin-container">
+          <div className="signin-screen">
+            <div className="signin-screen-body">
+              <div className="signin-screen-body-item left">
+                <div className="signin-title">
+                  <span>Signin</span>
+                </div>
               </div>
-             
-              <div className="signin-form-group">
-                <input 
-                className="signin-form-control"
-                 placeholder="PASSWORD"
-                 id="password"
-                 type="password"
-                 required  
-                 value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                         }}  
-                       />
+              <div className="screen-body-item">
+                <div className="signin-form">
+                  <div className="signin-form-group">
+                    <input
+                      className="signin-form-control"
+                      placeholder="EMAIL"
+                      type="email"
+                      id="email"
+                      required
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                      }}
+                    />
+                  </div>
+
+                  <div className="signin-form-group">
+                    <input
+                      className="signin-form-control"
+                      placeholder="PASSWORD"
+                      id="password"
+                      type="password"
+                      required
+                      value={password}
+                      onChange={(e) => {
+                        setPassword(e.target.value);
+                      }}
+                    />
+                  </div>
+
+                  <div className="signin-form-group buttons">
+                    <button
+                      className="signin-form-button sigin-button"
+                      onClick={handleSubmit}
+                    >
+                      Sign In
+                    </button>
+                  </div>
+                  {isLoading && <div>Loading...</div>}
+                  <br />
+                  <Link
+                    to="/signup"
+                    type="button"
+                    className="signin-form-button"
+                  >
+                    Create new account
+                  </Link>
+                </div>
               </div>
-             
-              <div className="signin-form-group buttons">
-                <button className="signin-form-button sigin-button" onClick={handleSubmit}>signin</button>
-                
-              </div>
-              <br/>
-              <Link
-            to="/signin"
-            type="button"
-            className="signin-form-button"
-          >
-            Create new account
-          </Link>
             </div>
           </div>
         </div>
       </div>
-    </div>
-   
-  </div>
-  </form>
+    </form>
   );
 };
 

@@ -13,7 +13,7 @@ const HomePage = () => {
           <div className="float-container">
             <div className="float-child left">
               <h1>
-                India’s most active student community with{" "}
+                Most active student community with{" "}
                 <font color="#FFDD59">80,000+</font> members.
               </h1>
               <p>
@@ -22,8 +22,15 @@ const HomePage = () => {
                 new friends and have fun!
               </p>
               <div className="home-form-group buttons">
-                <button className="home-form-button">Contact us</button>
-                <button className="home-form-button">Subscription</button>
+                <button
+                  className="home-form-button"
+                  onClick={() => {
+                    window.location.href = "/contact";
+                  }}
+                >
+                  Contact us
+                </button>
+                {/* <button className="home-form-button">Services</button> */}
               </div>
             </div>
 
@@ -36,7 +43,6 @@ const HomePage = () => {
       <Services />
       {/* <Testimonial/> */}
     </div>
-
   );
 };
 

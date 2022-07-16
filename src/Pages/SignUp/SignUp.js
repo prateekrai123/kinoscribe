@@ -9,6 +9,7 @@ const SignUp = (props) => {
   const [password, setPassword] = useState("");
   const [confPassword, setConfPassword] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setName(e.target.value);
@@ -32,7 +33,9 @@ const SignUp = (props) => {
   const handleSubmit = (e) => {
     if (password !== confPassword) {
       console.log("password Not Match");
+      return;
     }
+    setIsLoading(true);
     e.preventDefault();
     const data = {
       name: name,
@@ -43,9 +46,16 @@ const SignUp = (props) => {
     axios
       .post(`${baseUrl}/auth/signUp`, data)
       .then((res) => {
+        setIsLoading(false);
         console.log(res);
+        alert("SignUp Successfully");
+        setTimeout(() => {
+          window.location.href = "/signin";
+        }, 500);
       })
       .catch((err) => {
+        setIsLoading(false);
+        alert("SignUp Failed");
         console.log(err);
       });
   };
@@ -59,7 +69,7 @@ const SignUp = (props) => {
     //         handleSubmit(e);
     //       }}
     //     >
-        
+
     //       <h3> Sign-up Form </h3>
 
     //       <div>
@@ -75,7 +85,7 @@ const SignUp = (props) => {
     //       />
     //       </div>
     //       <div>
-            
+
     //       <input
     //       className="signup-form-control"
     //         type="email"
@@ -86,7 +96,7 @@ const SignUp = (props) => {
     //         }}
     //       />
     //       </div>
-        
+
     //       <div>
     //       <input
     //       className="signup-form-control"
@@ -108,7 +118,7 @@ const SignUp = (props) => {
     //           handleConfPasswordChange(e);
     //         }}
     //       />
-          
+
     //       </div>
     //       <div>
     //       <input
@@ -119,7 +129,7 @@ const SignUp = (props) => {
     //           handlePhoneNumber(e);
     //         }}
     //       />
-       
+
     //       </div>
     //       <div>
     //       <input type="submit" value="Submit" />
@@ -128,89 +138,88 @@ const SignUp = (props) => {
     //   </header>
     // </div>
     <div className="signup-background">
-    <div className="signup-container">
-      <div className="signup-screen">
-  
-        <div className="signup-screen-body">
-          <div className="signup-screen-body-item left">
-            <div className="signup-title">
-              <span>Sign up</span>
-              
+      <div className="signup-container">
+        <div className="signup-screen">
+          <div className="signup-screen-body">
+            <div className="signup-screen-body-item left">
+              <div className="signup-title">
+                <span>Sign up</span>
+              </div>
             </div>
-          </div>
-          <div className="signup-screen-body-item">
-            <div className="signup-form">
-              <div className="signup-form-group">
-                <input
-                 className="signup-form-control"
-                 placeholder="NAME" 
-                
-                         type="text"
-                         value={name}
-                         required
-                         onChange={(e) => {
-                           handleChange(e);
-                         }}
-                       />
-                 
-              </div>
-              <div className="signup-form-group">
-                <input 
-                className="signup-form-control" 
-                placeholder="EMAIL"
-                type="email"
-                        value={email}
-                        required
-                        onChange={(e) => {
-                          handleEmailChange(e);
-                        }}
-                      />
-              </div>
-             
-              <div className="signup-form-group">
-                <input 
-                className="signup-form-control"
-                 placeholder="PASSWORD"
-                 type="password"
-                         value={password}
-                         required
-                         onChange={(e) => {
-                           handlePasswordChange(e);
-                         }}
-                       />
-              </div>
-              <div className="signup-form-group">
-                <input 
-                className="signup-form-control"
-                 placeholder="CONFIRM PASSWORD"
-                 type="password"
-                  value={confPassword}
-                  required
-                  onChange={(e) => {
-                    handleConfPasswordChange(e);
-                  }}
-                />
-              </div>
-              <div className="signup-form-group">
-                <input 
-                className="signup-form-control" 
-                placeholder="CONTACT NO"
-                type="number"
-                value={phoneNumber}
-                onChange={(e) => {
-                handlePhoneNumber(e);
-                 }}/>
-                
-              </div>
-              <div className="signup-form-group buttons">
-                <button className="signup-form-button">signup</button>
+            <div className="signup-screen-body-item">
+              <div className="signup-form">
+                <div className="signup-form-group">
+                  <input
+                    className="signup-form-control"
+                    placeholder="NAME"
+                    type="text"
+                    value={name}
+                    required
+                    onChange={(e) => {
+                      handleChange(e);
+                    }}
+                  />
+                </div>
+                <div className="signup-form-group">
+                  <input
+                    className="signup-form-control"
+                    placeholder="EMAIL"
+                    type="email"
+                    value={email}
+                    required
+                    onChange={(e) => {
+                      handleEmailChange(e);
+                    }}
+                  />
+                </div>
+
+                <div className="signup-form-group">
+                  <input
+                    className="signup-form-control"
+                    placeholder="PASSWORD"
+                    type="password"
+                    value={password}
+                    required
+                    onChange={(e) => {
+                      handlePasswordChange(e);
+                    }}
+                  />
+                </div>
+                <div className="signup-form-group">
+                  <input
+                    className="signup-form-control"
+                    placeholder="CONFIRM PASSWORD"
+                    type="password"
+                    value={confPassword}
+                    required
+                    onChange={(e) => {
+                      handleConfPasswordChange(e);
+                    }}
+                  />
+                </div>
+                <div className="signup-form-group">
+                  <input
+                    className="signup-form-control"
+                    placeholder="CONTACT NO"
+                    type="number"
+                    value={phoneNumber}
+                    onChange={(e) => {
+                      handlePhoneNumber(e);
+                    }}
+                  />
+                </div>
+                <div className="signup-form-group buttons">
+                  <button className="signup-form-button" onClick={handleSubmit}>
+                    Sign Up
+                  </button>
+                  {isLoading && <div className="loader">loading...</div>}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   );
 };
 
