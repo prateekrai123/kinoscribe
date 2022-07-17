@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import Navigation from "./Components/MainHeader/Navigation";
 import AllPendingOrders from "./Pages/Admin/AllPendingOrders";
+import SingleOrder from "./Pages/Admin/SingleOrder";
 // import Admin from "./Pages/Admin/Admin";
 import ContactUS from "./Pages/ContactUs/ContactUS";
 import HomePage from "./Pages/HomePage/HomePage";
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/product" element={<Product />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/pendingOrders" element={<AllPendingOrders />} />
+          <Route path="/singleorder" element={<SingleOrder/>} />
         </Routes>
         <Footer />
       </Router>

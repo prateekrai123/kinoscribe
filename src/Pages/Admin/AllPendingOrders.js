@@ -1,7 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { baseUrl } from "../../API/api";
-import SingleOrder from "./SingleOrder";
+import './AllPendingOrders.css';
+import Table from "./Table";
+
+// import SingleOrder from "./SingleOrder";
 
 const AllPendingOrders = () => {
   const [pendingOrders, setPendingOrders] = useState([]);
@@ -24,10 +27,19 @@ const AllPendingOrders = () => {
       });
   });
 
+  const column = [
+    {heading: 'id', value:"_id"},
+    {heading: 'Word_Count', value:"wordCount"},
+    {heading: 'Price', value:"price"}
+  ]
+
   return (
     <div>
+      <div className="heading">
       <h2>All Pending Orders</h2>
-      <div>
+      </div>
+      <Table data = {pendingOrders} column = {column}/>
+      {/* <div>
         {pendingOrders.map((order) => {
           return (
             <div>
@@ -44,7 +56,7 @@ const AllPendingOrders = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };

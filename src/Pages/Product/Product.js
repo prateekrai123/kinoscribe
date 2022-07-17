@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import "./Product.css";
-import DropFileInput from "../../Components/DropFileInput/DropFileInput";
+// import DropFileInput from "../../Components/DropFileInput/DropFileInput";
 import { baseUrl } from "../../API/api";
 import axios from "axios";
-import userContext from "../../context/UserContext";
+// import userContext from "../../context/UserContext";
 const Product = () => {
   const query = new URLSearchParams(window.location.search).get("product");
   const token = localStorage.getItem("token");
