@@ -7,11 +7,8 @@
 
 .singleOrder-flex-container {
     display: flex;
-
     padding: 20px;
     justify-content: center;
-    /* flex-direction: row; */
-    /* gap : 15px; */
     color: white;
     
   }
@@ -23,8 +20,7 @@
   }
   .singleOrder-flex{
     flex: 0 1 1050px;
-    /* height: 70vh; */
-    /* border: 2px solid red; */
+    
     padding: 40px 20px;
     background-color: #222222;
     box-shadow: 0 20px 40px rgba(0, 0, 0, .4);

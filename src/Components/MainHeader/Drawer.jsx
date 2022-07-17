@@ -8,7 +8,7 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
       {isOpen && <Backdrop onClick={toggleDrawer} />}
       <SDrawer isOpen={isOpen}>
         <RightNav>
-          <SNavbarBrand>LOGO</SNavbarBrand>
+          <SNavbarBrand>KINOSCRIBE</SNavbarBrand>
           <NavRoutes>
             {routes.map((route) => {
               if (route.subRoutes) {
@@ -34,6 +34,7 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
 
 export default Drawer;
 const SNavbarBrand = styled.h2`
+  color : #FEDD59;
   font-size: 3rem;
 `;
 const Backdrop = styled.div`
@@ -44,7 +45,7 @@ const Backdrop = styled.div`
   top: 0;
   left: 0;
   transition: 0.3s ease;
-
+  
   background-color: rgba(0, 0, 0, 0.2);
 `;
 const SDrawer = styled.div`
@@ -53,7 +54,8 @@ const SDrawer = styled.div`
   top: 0;
   height: 100vh;
   width: 70%;
-  background-color: white;
+  color:white;
+  background-color: #2B2B2B;
   transition: 0.3s ease;
   border-radius : 0 25px 25px 0;
   transform: translateX(${(props) => (props.isOpen ? "0" : "-100%")});
@@ -64,12 +66,14 @@ const RightNav = styled.div`
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
+  
 `;
 const NavRoutes = styled.div``;
 const NavRoute = styled(Link)`
+
   display: flex;
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 2rem;
   padding: 0.5rem;
 `;
@@ -84,7 +88,7 @@ const LoginButton = styled.button`
   &:hover {
     transition: 0.3s ease;
     border: 1px solid transparent;
-    background-color: yellow;
-    box-shadow: 0px 0px 10px yellow;
+    background-color: #FEDD59;
+    box-shadow: 0px 0px 6px #FEDD59;
   }
 `;

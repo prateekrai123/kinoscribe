@@ -43,7 +43,7 @@ const MenuButton = styled.div`
 
 const SubRoute = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: white;
   padding: 0.5rem;
   font-size: 1.5rem;
 `;
