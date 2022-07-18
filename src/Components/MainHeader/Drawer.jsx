@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ExpandMenu from "./ExpandMenu";
+import { Logout } from "react-admin";
 const Drawer = ({ isOpen, toggleDrawer, routes }) => {
   return (
     <>
@@ -26,6 +27,7 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
             })}
           </NavRoutes>
           <LoginButton>Login</LoginButton>
+          <LogoutButton>Logout</LogoutButton>
         </RightNav>
       </SDrawer>
     </>
@@ -35,7 +37,7 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
 export default Drawer;
 const SNavbarBrand = styled.h2`
   color : #FEDD59;
-  font-size: 3rem;
+  font-size: 2rem;
 `;
 const Backdrop = styled.div`
   height: 100%;
@@ -79,6 +81,20 @@ const NavRoute = styled(Link)`
 `;
 
 const LoginButton = styled.button`
+  padding: 0.7rem 3rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3rem;
+  transition: 0.3s ease;
+  align-self: flex-start;
+  &:hover {
+    transition: 0.3s ease;
+    border: 1px solid transparent;
+    background-color: #FEDD59;
+    box-shadow: 0px 0px 6px #FEDD59;
+  }
+`;
+const LogoutButton = styled.button`
   padding: 0.7rem 3rem;
   background-color: white;
   border: 1px solid black;

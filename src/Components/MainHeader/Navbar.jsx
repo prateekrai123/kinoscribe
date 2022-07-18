@@ -43,6 +43,7 @@ const Navbar = ({ toggleDrawer, routes }) => {
           <LoginButton onClick={() => {
             window.location.href = "/signin";
           }}>Login</LoginButton>
+          <LogoutButton>Logout</LogoutButton>
         </RightNav>
       </NavContainer>
     </SNavbar>
@@ -150,7 +151,7 @@ const LoginButton = styled.button`
   }
 `;
 
-const LogOutButton = styled.button`
+const LogoutButton = styled.button`
 @media (max-width: 900px) {
   padding: 0.6rem 2rem;
   font-size : 11px;
