@@ -40,10 +40,14 @@ const Navbar = ({ toggleDrawer, routes }) => {
           {localStorage.getItem("token")!==undefined && localStorage.getItem("token")!=="" && <LogOutButton onClick={() => {
             window.location.href = "/signout";
           }}>Login</LogOutButton>} */}
-          <LoginButton onClick={() => {
+          {!localStorage.getItem("token") && <LoginButton onClick={() => {
             window.location.href = "/signin";
-          }}>Login</LoginButton>
-          <LogoutButton>Logout</LogoutButton>
+          }}>Login</LoginButton>}
+          {localStorage.getItem("token") && <LogoutButton onClick={() => {
+            localStorage.removeItem("token")
+            localStorage.removeItem("userId")
+            window.location.href = "/"
+          }}>Logout</LogoutButton>}
         </RightNav>
       </NavContainer>
     </SNavbar>

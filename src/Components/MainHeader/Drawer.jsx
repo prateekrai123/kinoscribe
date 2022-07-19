@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ExpandMenu from "./ExpandMenu";
 import { Logout } from "react-admin";
 const Drawer = ({ isOpen, toggleDrawer, routes }) => {
+  console.log(localStorage.getItem("token"))
   return (
     <>
       {isOpen && <Backdrop onClick={toggleDrawer} />}
@@ -26,8 +27,8 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
               );
             })}
           </NavRoutes>
-          <LoginButton>Login</LoginButton>
-          <LogoutButton>Logout</LogoutButton>
+          {(!localStorage.getItem("token")) && <LoginButton>Login</LoginButton>}
+          {localStorage.getItem("token") && <LogoutButton>Logout</LogoutButton>}
         </RightNav>
       </SDrawer>
     </>
