@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useEffect } from "react";
 
 var userContext = createContext({
   token: "",
@@ -26,17 +26,17 @@ export const UserProvider = (props) => {
     };
   };
 
-  userContext = {
-    token: localStorage.getItem("token"),
-    isAdmin: localStorage.getItem("isAdmin") === "true",
-    login: loginHandler,
-    logout: logoutHandler,
-  };
+  useEffect(() => {
+    userContext = {
+      token: localStorage.getItem("token"),
+      isAdmin: localStorage.getItem("isAdmin") === "true",
+      login: loginHandler,
+      logout: logoutHandler,
+    };
+  }, []);
 
   return (
-    <userContext.Provider value={userContext}>
-      {props.children}
-    </userContext.Provider>
+    <userContext.Provider value={userContext}>{props}</userContext.Provider>
   );
 };
 

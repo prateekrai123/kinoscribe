@@ -12,6 +12,8 @@ const Product = () => {
   const [file, setFile] = useState(null);
   const [wordCount, setWordCount] = useState(0);
   const [price, setPrice] = useState(0);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -22,6 +24,8 @@ const Product = () => {
     formData.append("wordCount", wordCount);
     formData.append("serviceId", product._id);
     formData.append("price", price);
+    formData.append("description", description);
+    formData.append("title", title);
 
     const header = {
       headers: {
@@ -70,13 +74,40 @@ const Product = () => {
           <div className="product-flex product-flex-right">
             <div>
               <div>
-                <h3>Enter your word count:</h3>
+                <h3 style={{ marginTop: "10px" }}>Title:</h3>
+                <input
+                  className="product-input-control"
+                  type="text"
+                  placeholder="title"
+                  onChange={(e) => {
+                    setTitle(e.target.value);
+                  }}
+                ></input>
+              </div>
+              <div>
+                <h3 style={{ marginTop: "10px" }}>Description</h3>
+                <input
+                  className="product-input-control"
+                  type="text"
+                  placeholder="description"
+                  onChange={(e) => {
+                    setDescription(e.target.value);
+                  }}
+                ></input>
+              </div>
+              <div>
+                <h3 style={{ marginTop: "10px" }}>Price </h3>
+                <div>{price}</div>
+              </div>
+              <div>
+                <h3 style={{ marginTop: "10px" }}>Enter your word count:</h3>
                 <input
                   className="product-input-control"
                   type="number"
                   placeholder="word count"
                   onChange={(e) => {
                     setWordCount(e.target.value);
+                    setPrice(e.target.value * product.price);
                   }}
                 ></input>
               </div>
@@ -95,6 +126,7 @@ const Product = () => {
                   type="file"
                   onChange={(e) => {
                     setFile(e.target.files[0]);
+                    console.log(file);
                   }}
                 ></input>
                 <br></br>
