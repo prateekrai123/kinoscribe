@@ -121,7 +121,6 @@ const SingleOrder = () => {
             style={{ width: "250px" }}
             onChange={(e) => {
               setFile(e.target.files[0]);
-              console.log(file);
             }}
           ></input>
           <br />
