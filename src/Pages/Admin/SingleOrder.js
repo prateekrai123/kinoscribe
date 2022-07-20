@@ -61,6 +61,7 @@ const SingleOrder = () => {
   };
 
   return (
+    <>
     <div className="singleOrder-background">
       <div className="singleOrder-heading">
         <h1>SingleOrder</h1>
@@ -131,6 +132,7 @@ const SingleOrder = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

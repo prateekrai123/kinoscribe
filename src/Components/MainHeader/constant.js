@@ -22,6 +22,10 @@ export const routes = [
   //   },
   // ],
   // },
+  {
+    name: "Dashboard",
+    link: "/dashboard",
+  },
 
   {
     name: "Contact Us",

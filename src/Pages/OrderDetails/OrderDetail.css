@@ -1,0 +1,45 @@
+.orderDetail-background{
+    width: 100%;
+    min-height: 50vh;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.orderDetail-flex-container {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    color: white;
+    
+  }
+  .orderDetail-heading{
+    display:flex ;
+    justify-content: center;
+    color: #FEDD58;
+    margin-bottom: 2rem;
+  }
+  .orderDetail-flex{
+    flex: 0 1 1050px;
+    
+    padding: 40px 20px;
+    background-color: #222222;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    border-radius: 15px;
+	transition: all ease 0.3s;
+}
+
+  .orderDetail-button{
+  background: #31343C;
+  border: 2px solid #31343C;
+  border-radius: 50px;
+  padding: 6px 25px;
+  color:#F9FAFB ;
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
+
+}
+  .orderDetail-form-control::placeholder {
+    color: #666;
+  }

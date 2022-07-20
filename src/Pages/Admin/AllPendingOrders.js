@@ -35,14 +35,14 @@ const AllPendingOrders = () => {
   ];
 
   return (
-    <div>
+    <>
       <div className="heading">
         <h2>All Pending Orders</h2>
       </div>
       <div>
         <Table data={pendingOrders} column={column} />
       </div>
-    </div>
+    </>
   );
 };
 

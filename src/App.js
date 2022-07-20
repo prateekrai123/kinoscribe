@@ -6,7 +6,9 @@ import AllPendingOrders from "./Pages/Admin/AllPendingOrders";
 import SingleOrder from "./Pages/Admin/SingleOrder";
 // import Admin from "./Pages/Admin/Admin";
 import ContactUS from "./Pages/ContactUs/ContactUS";
+import Dashboard from "./Pages/DashBoard/Dashboard";
 import HomePage from "./Pages/HomePage/HomePage";
+import OrderDetail from "./Pages/OrderDetails/OrderDetail";
 import Product from "./Pages/Product/Product";
 import SignIn from "./Pages/SignIn/SignIn";
 import SignUp from "./Pages/SignUp/SignUp";
@@ -25,6 +27,8 @@ const App = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/pendingOrders" element={<AllPendingOrders />} />
           <Route path="/singleOrder" element={<SingleOrder />} />
+          <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/detail" element={<OrderDetail/>} />
         </Routes>
         <Footer />
       </Router>
