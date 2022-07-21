@@ -1,3 +1,10 @@
+const userToken = localStorage.getItem("token");
+
+const dashboard = {
+  name: "Dashboard",
+  link: "/dashboard",
+};
+
 export const routes = [
   {
     name: "Home",
@@ -22,13 +29,13 @@ export const routes = [
   //   },
   // ],
   // },
-  {
-    name: "Dashboard",
-    link: "/dashboard",
-  },
 
   {
     name: "Contact Us",
     link: "/contact",
   },
 ];
+
+if (userToken !== null) {
+  routes.push(dashboard);
+}

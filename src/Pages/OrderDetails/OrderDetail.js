@@ -81,12 +81,15 @@ const OrderDetail = () => {
             </p>
 
             <h4>
-              {order && order.delieveredFile && (
-                <a href={order && `${baseUrl}/profile/${order.delieveredFile}`}>
-                  {" "}
-                  Download File
-                </a>
-              )}
+              {order &&
+                order.delieveredFile &&
+                order.paymentDetails &&
+                order.paymentDetails.paymentStatus === "succeeded" && (
+                  <a href={`${baseUrl}/profile/${order.delieveredFile}`}>
+                    {" "}
+                    Download File
+                  </a>
+                )}
             </h4>
 
             <br />
