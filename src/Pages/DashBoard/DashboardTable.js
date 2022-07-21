@@ -22,10 +22,12 @@ const DashboardTable = ({ data, column }) => {
 
 const TableHeadItem = ({ item }) => <th>{item.heading}</th>;
 const TableRow = ({ item, column, onClick }) => (
-  <tr>
+  <tr
+    onClick={() => {
+      window.location.href = `/details?id=${item._id}`;
+    }}
+  >
     {column.map((columnItem, index) => {
-     
-
       return <td>{item[`${columnItem.value}`]}</td>;
     })}
   </tr>
