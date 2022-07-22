@@ -121,7 +121,10 @@ const OrderDetail = () => {
                 trigger={<button className="singleOrder-button">Pay</button>}
               >
                 Dou you agree to our{" "}
-                <a href="https://tos.kinoscribe.com">terms of services</a>?
+                <a href="https://tos.kinoscribe.com" target="_blank">
+                  terms of services
+                </a>
+                ?
                 <button
                   className="singleOrder-button"
                   onClick={onPayButtonClick}
