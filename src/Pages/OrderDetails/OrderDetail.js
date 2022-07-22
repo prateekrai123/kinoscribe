@@ -3,7 +3,7 @@ import "./OrderDetail.css";
 import axios from "axios";
 import { baseUrl } from "../../API/api";
 import Popup from "reactjs-popup";
-// import "reactjs-popup/dist/index.css";
+import "reactjs-popup/dist/index.css";
 
 const OrderDetail = () => {
   const id = new URLSearchParams(window.location.search).get("id");
