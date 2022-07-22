@@ -1,8 +1,14 @@
 const userToken = localStorage.getItem("token");
+const isAdmin = localStorage.getItem("isAdmin");
 
 const dashboard = {
   name: "Dashboard",
   link: "/dashboard",
+};
+
+const admin = {
+  name: "Admin",
+  link: "/pendingOrders",
 };
 
 export const routes = [
@@ -10,10 +16,7 @@ export const routes = [
     name: "Home",
     link: "/",
   },
-  {
-    name: "Admin",
-    link: "/pendingOrders",
-  },
+
   // {
   // name: "Services",
   // link: "/services",
@@ -39,6 +42,10 @@ export const routes = [
     link: "/contact",
   },
 ];
+
+if (isAdmin) {
+  routes.push(admin);
+}
 
 if (userToken !== null) {
   routes.push(dashboard);

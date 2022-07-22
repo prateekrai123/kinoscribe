@@ -27,6 +27,7 @@ const SignIn = (props) => {
           alert(res.data.message);
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("userId", res.data.userId);
+          localStorage.setItem("isAdmin", res.data.isAdmin);
           window.location.href = "/";
         }
       })

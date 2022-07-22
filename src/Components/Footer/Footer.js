@@ -1,9 +1,12 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
+import logo from "../../Images/logo.png";
+import styled from "styled-components";
+
 const Footer = () => {
   return (
-    <div>   
-   {/* <div className="footer">
+    <div>
+      {/* <div className="footer">
       <div className="heading">
         <h2>COMPANY NAME<sup>™</sup></h2>
       </div>
@@ -70,55 +73,76 @@ const Footer = () => {
         </div>
       </footer>
     </div> */}
-     
 
-    <section class="footer">
+      <section class="footer">
         <div class="foot-1">
-            <section class="about">
-                <p class="title">About</p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam mollitia, rerum unde excepturi ex
-                    quibusdam laudantium, non aut libero deserunt vero distinctio sit ratione sunt nihil debitis fugiat,
-                    molestiae ullam. Eveniet, fuga? Necessitatibus officia alias totam eaque iste soluta placeat eum,
-                    autem doloribus animi, assumenda et dignissimos sed corporis porro, inventore sequi? Expedita porro
-                    delectus animi!
-                </p>
-            </section>
-            <section>
-                <div class="title">Categories</div>
-                <ul>
-                    <li>Html</li>
-                    <li>Css</li>
-                    <li>Javascript</li>
-                    <li>Frameworks</li>
-                    <li>Templates</li>
-                </ul>
-            </section>
-            <section>
-                <div class="title">Quick Links</div>
-                <ul>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Contribute</li>
-                    <li>Private Policy</li>
-                    <li>Sitemap</li>
-                </ul>
-            </section>
+          <section class="about">
+            <p class="title">
+              <Image alt="" src={logo} />
+            </p>
+            <p>
+              Kinoscribe aims to create a easy and fair way to accurately and
+              quickly get your films, videos, or text documents proofread,
+              translated and captioned. A Kinoverse Corp service.<br></br>
+              <br></br>
+              <a href="http://kinoverse.net/">Kinoverse Corp</a>
+            </p>
+          </section>
+          {/* <section>
+            <div class="title">Categories</div>
+            <ul>
+              <li>Html</li>
+              <li>Css</li>
+              <li>Javascript</li>
+              <li>Frameworks</li>
+              <li>Templates</li>
+            </ul>
+          </section>
+          <section>
+            <div class="title">Quick Links</div>
+            <ul>
+              <li>About Us</li>
+              <li>Contact Us</li>
+              <li>Contribute</li>
+              <li>Private Policy</li>
+              <li>Sitemap</li>
+            </ul>
+          </section> */}
         </div>
 
         <div class="foot-2">
-            <p>Copyright 2020 Free to use for everyone</p>
-            <div class="socials">
-                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
-                <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
-                <a href="#"> <i class="fab fa-twitter"></i> </a>
-                <a href="#"> <i class="fab fa-youtube"></i> </a>
-            </div>
+          <p>Copyright@KinoverseCorp</p>
+          <div class="socials">
+            <a href="https://instagram.com/kinoscribe?igshid=YmMyMTA2M2Y=">
+              {" "}
+              <i class="fa-brands fa-instagram"></i>{" "}
+            </a>
+            <a href="https://www.facebook.com/Kinoscribe-100393012769362/">
+              {" "}
+              <i class="fa-brands fa-facebook"></i>{" "}
+            </a>
+            <a href="https://twitter.com/kinoscribe?t=J9crzrWD3vnWIcVAG8IL_w&s=09">
+              {" "}
+              <i class="fa-brands fa-twitter"></i>{" "}
+            </a>
+            <a href="https://tiktok.com/@kinoscribe">
+              {" "}
+              <i class="fa-brands fa-tiktok"></i>{" "}
+            </a>
+          </div>
         </div>
-    </section>
+      </section>
     </div>
-
-  )
-}
+  );
+};
 
 export default Footer;
+
+const Image = styled.img`
+  @media (max-width: 900px) {
+    width: 50%;
+  }
+  width: 20%;
+  // float: left;
+  // margin-right: 10px;
+`;
