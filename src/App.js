@@ -12,6 +12,7 @@ import OrderDetail from "./Pages/OrderDetails/OrderDetail";
 import Product from "./Pages/Product/Product";
 import SignIn from "./Pages/SignIn/SignIn";
 import SignUp from "./Pages/SignUp/SignUp";
+import VerifyUser from "./Pages/VerifyUser/VerifyUser";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/singleOrder" element={<SingleOrder />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/details" element={<OrderDetail />} />
+          <Route path="/verify" element={<VerifyUser />} />
         </Routes>
         <Footer />
       </Router>

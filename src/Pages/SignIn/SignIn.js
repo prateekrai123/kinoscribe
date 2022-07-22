@@ -18,13 +18,13 @@ const SignIn = (props) => {
       .then((res) => {
         setIsLoading(false);
         console.log(res);
-        if (res.isError) {
+        if (res.data.isError) {
           alert(res.data.message);
-          userContext.loginHandler({
-            token: res.data.token,
-            isAdmin: res.data.isAdmin,
-          });
-          console.log(userContext);
+          // userContext.loginHandler({
+          //   token: res.data.token,
+          //   isAdmin: res.data.isAdmin,
+          // });
+          // console.log(userContext);
         } else {
           alert(res.data.message);
           localStorage.setItem("token", res.data.token);
@@ -99,6 +99,15 @@ const SignIn = (props) => {
                     className="signin-form-button"
                   >
                     Create new account
+                  </Link>
+                  <br></br>
+                  <br></br>
+                  <Link
+                    to="/verify"
+                    type="button"
+                    className="signin-form-button"
+                  >
+                    Verify User
                   </Link>
                 </div>
               </div>

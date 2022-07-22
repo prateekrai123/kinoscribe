@@ -10,6 +10,10 @@ export const routes = [
     name: "Home",
     link: "/",
   },
+  {
+    name: "Admin",
+    link: "/pendingOrders",
+  },
   // {
   // name: "Services",
   // link: "/services",

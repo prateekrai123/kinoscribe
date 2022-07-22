@@ -49,9 +49,7 @@ const SignUp = (props) => {
         setIsLoading(false);
         console.log(res);
         alert("SignUp Successfully");
-        // setTimeout(() => {
-        //   window.location.href = "/signin";
-        // }, 500);
+        window.location.href = "/verify";
       })
       .catch((err) => {
         setIsLoading(false);

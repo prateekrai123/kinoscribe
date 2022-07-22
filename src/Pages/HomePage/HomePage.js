@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomePage.css";
-import MainImage from "../../Images/Project_69-08.jpg";
+import MainImage from "../../Images/mainImage.png";
 import Services from "../Services/Services";
 
 // import Testimonial from "../../Components/Testimonial/Testimonial";

@@ -7,6 +7,7 @@ const OrderDetail = () => {
   const id = new URLSearchParams(window.location.search).get("id");
 
   const [order, setOrder] = useState();
+  const [paid, setPaid] = useState(false);
 
   const header = {
     headers: {
@@ -24,6 +25,10 @@ const OrderDetail = () => {
       .post(`${baseUrl}/order/orderById`, data, header)
       .then((res) => {
         setOrder(res.data.order);
+        if (order.paymentDetails.paymentStatus === "succeeded") {
+          setPaid(true);
+        }
+        console.log(paid);
         console.log(order);
       })
       .catch((err) => {
@@ -101,7 +106,7 @@ const OrderDetail = () => {
 
             <br />
             <br />
-            {order && order.isCompleted && (
+            {order && order.isCompleted && !paid && (
               <button className="singleOrder-button" onClick={onPayButtonClick}>
                 Pay
               </button>
