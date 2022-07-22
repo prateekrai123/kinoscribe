@@ -68,13 +68,15 @@ const Product = () => {
   return (
     <div className="product-background">
       <div className="product-heading">
-        <h1>Subscription</h1>
+        <h1>Service Details</h1>
       </div>
       <div>
         <div className="product-flex-container">
           <div className="product-flex product-flex-left">
             <h2>{product && product.title}</h2>
             <br />
+            <p>Price: ${product && product.price}/word</p>
+            <br></br>
             <p>{product && product.description}</p>
           </div>
           <div className="product-flex product-flex-right">

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./OrderDetail.css";
 import axios from "axios";
 import { baseUrl } from "../../API/api";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 const OrderDetail = () => {
   const id = new URLSearchParams(window.location.search).get("id");
@@ -111,9 +113,18 @@ const OrderDetail = () => {
             <br />
             <br />
             {order && order.isCompleted && !paid && (
-              <button className="singleOrder-button" onClick={onPayButtonClick}>
-                Pay
-              </button>
+              <Popup
+                trigger={<button className="singleOrder-button">Pay</button>}
+              >
+                Dou you agree to our{" "}
+                <a href="https://tos.kinoscribe.com">terms of services</a>?
+                <button
+                  className="singleOrder-button"
+                  onClick={onPayButtonClick}
+                >
+                  Yes
+                </button>
+              </Popup>
             )}
 
             {order && order.isCompleted && paid && <h4>Status : Paid</h4>}

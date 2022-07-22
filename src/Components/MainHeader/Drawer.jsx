@@ -3,13 +3,20 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ExpandMenu from "./ExpandMenu";
 import { Logout } from "react-admin";
+
+import logo from "../../Images/logo.png"
+
 const Drawer = ({ isOpen, toggleDrawer, routes }) => {
   return (
     <>
       {isOpen && <Backdrop onClick={toggleDrawer} />}
       <SDrawer isOpen={isOpen}>
         <RightNav>
-          <SNavbarBrand>KINOSCRIBE</SNavbarBrand>
+          <SNavbarBrand></SNavbarBrand>
+          
+        <Image alt="" src={logo} onClick={()=>{
+          window.location.href = "/"
+        }} />
           <NavRoutes>
             {routes.map((route) => {
               if (route.subRoutes) {
@@ -70,6 +77,17 @@ const RightNav = styled.div`
   padding: 1rem;
   
 `;
+
+const Image = styled.img`
+@media (max-width: 900px){
+width:70%;  
+
+}
+  width: 30%;
+  // float: left;
+  // margin-right: 10px;
+`;
+
 const NavRoutes = styled.div``;
 const NavRoute = styled(Link)`
 

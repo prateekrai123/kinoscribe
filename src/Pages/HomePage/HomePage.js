@@ -13,13 +13,16 @@ const HomePage = () => {
           <div className="float-container">
             <div className="float-child left">
               <h1>
-                Most active student community with{" "}
-                <font color="#FFDD59">80,000+</font> members.
+                Same day <font color="#FFDD59">captioning</font>,{" "}
+                <font color="#FFDD59">translation</font>, and{" "}
+                <font color="#FFDD59">proofreading </font>services
               </h1>
               <p>
-                Learn from experts and network through events, join clubs and
-                learn real life skills, Hang out on our discord server to make
-                new friends and have fun!
+                Kinoscribe offers competitive{" "}
+                <font color="#FFDD59">pay by the word</font> pricing which
+                allows you to save on money and still get your results in under
+                a day. Simple choose your package below, enter your estimated
+                word count, submit your files and we will handle it from there.
               </p>
               <div className="home-form-group buttons">
                 <button

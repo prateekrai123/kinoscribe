@@ -17,7 +17,9 @@ const Navbar = ({ toggleDrawer, routes }) => {
           <FaBars />
         </DrawerButton>
         <SNavbarBrand>
-        <Image alt="" src={logo} />
+        <Image alt="" src={logo} onClick={()=>{
+          window.location.href = "/"
+        }} />
         </SNavbarBrand>
         {/* <LogoDiv /> */}
         <RightNav>
@@ -45,6 +47,7 @@ const Navbar = ({ toggleDrawer, routes }) => {
           {localStorage.getItem("token") && <LogoutButton onClick={() => {
             localStorage.removeItem("token")
             localStorage.removeItem("userId")
+            localStorage.removeItem("isAdmin")
             window.location.href = "/"
           }}>Logout</LogoutButton>}
         </RightNav>

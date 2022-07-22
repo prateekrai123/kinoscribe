@@ -7,7 +7,10 @@ const Services = () => {
         <h1>
           Ser<font color="#FFDD59">vic</font>es
         </h1>
-        <p>We Provide The Best In Class Servies For Our Customers</p>
+        <p>
+          Choose your package and enter your estimated word count. We will
+          handle the rest!
+        </p>
       </div>
 
       <div class="s-box-container">
@@ -18,10 +21,10 @@ const Services = () => {
 
           <h1>Captions</h1>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>Captions for audio and video done professionally and accurately</p>
 
           {/* <a class="s-btn" href="#">
-            More
+            Get Started
           </a> */}
           <button
             class="s-btn"
@@ -29,7 +32,7 @@ const Services = () => {
               window.location.href = "/product?product=caption";
             }}
           >
-            More
+            Get Started
           </button>
         </div>
 
@@ -40,9 +43,7 @@ const Services = () => {
 
           <h1>Translation</h1>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          </p>
+          <p>Translate your subtitles, or text documents</p>
 
           <button
             class="s-btn"
@@ -50,7 +51,7 @@ const Services = () => {
               window.location.href = "/product?product=translation";
             }}
           >
-            More
+            Get Started
           </button>
         </div>
 
@@ -60,16 +61,14 @@ const Services = () => {
           <img alt="2" src="images/2.png" />
           <h1>Proofreading</h1>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          </p>
+          <p>Make your document error free and effective</p>
           <button
             class="s-btn"
             onClick={() => {
               window.location.href = "/product?product=proofreading";
             }}
           >
-            More
+            Get Started
           </button>
         </div>
 
@@ -79,16 +78,14 @@ const Services = () => {
           <img alt="2" src="images/2.png" />
           <h1>Captions+Translation</h1>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          </p>
+          <p></p>
           <button
             class="s-btn"
             onClick={() => {
               window.location.href = "/product?product=caption+translation";
             }}
           >
-            More
+            Get Started
           </button>
         </div>
 
@@ -98,16 +95,14 @@ const Services = () => {
           <img alt="2" src="images/2.png" />
           <h1>Caption+Proofreading</h1>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          </p>
+          <p></p>
           <button
             class="s-btn"
             onClick={() => {
               window.location.href = "/product?product=caption+proofreading";
             }}
           >
-            More
+            Get Started
           </button>
         </div>
 
@@ -117,9 +112,7 @@ const Services = () => {
           <img alt="2" src="images/2.png" />
           <h1>Translation+Proofreading</h1>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          </p>
+          <p></p>
           <button
             class="s-btn"
             onClick={() => {
@@ -127,7 +120,7 @@ const Services = () => {
                 "/product?product=translation+proofreading";
             }}
           >
-            More
+            Get Started
           </button>
         </div>
 
@@ -140,9 +133,7 @@ const Services = () => {
               Captions+Translation<br></br>+Proofreading
             </h1>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          </p>
+          <p></p>
           <button
             class="s-btn"
             onClick={() => {
@@ -150,7 +141,7 @@ const Services = () => {
                 "/product?product=caption+translation+proofreading";
             }}
           >
-            More
+            Get Started
           </button>
         </div>
       </div>
