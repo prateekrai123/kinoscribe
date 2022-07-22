@@ -1,5 +1,13 @@
 import React from "react";
 import "./Services.css";
+import caption from "../../Images/caption.JPG";
+import translation from "../../Images/translation.JPG";
+import proofreading from "../../Images/proofreading.JPG";
+import ct from "../../Images/caption+translation.JPG";
+import cp from "../../Images/caption+proofreading.JPG";
+import tp from "../../Images/translation+proofreading.JPG";
+import cpt from "../../Images/cpt.JPG";
+
 const Services = () => {
   return (
     <section class="services">
@@ -17,7 +25,8 @@ const Services = () => {
         <div class="s-box">
           <div class="bar"></div>
 
-          <img alt="1" src="images/1.png" />
+          <img alt="1" src={caption} />
+          <br></br>
 
           <h1>Captions</h1>
 
@@ -39,7 +48,8 @@ const Services = () => {
         <div class="s-box">
           <div class="bar"></div>
 
-          <img alt="2" src="images/2.png" />
+          <img alt="1" src={translation} />
+          <br></br>
 
           <h1>Translation</h1>
 
@@ -58,7 +68,8 @@ const Services = () => {
         <div class="s-box">
           <div class="bar"></div>
 
-          <img alt="2" src="images/2.png" />
+          <img alt="1" src={proofreading} />
+          <br></br>
           <h1>Proofreading</h1>
 
           <p>Make your document error free and effective</p>
@@ -75,7 +86,8 @@ const Services = () => {
         <div class="s-box">
           <div class="bar"></div>
 
-          <img alt="2" src="images/2.png" />
+          <img alt="1" src={ct} />
+          <br></br>
           <h1>Captions+Translation</h1>
 
           <p></p>
@@ -92,7 +104,8 @@ const Services = () => {
         <div class="s-box">
           <div class="bar"></div>
 
-          <img alt="2" src="images/2.png" />
+          <img alt="1" src={cp} />
+          <br></br>
           <h1>Caption+Proofreading</h1>
 
           <p></p>
@@ -109,7 +122,8 @@ const Services = () => {
         <div class="s-box">
           <div class="bar"></div>
 
-          <img alt="2" src="images/2.png" />
+          <img alt="1" src={tp} />
+          <br></br>
           <h1>Translation+Proofreading</h1>
 
           <p></p>
@@ -127,7 +141,8 @@ const Services = () => {
         <div class="s-box">
           <div class="bar"></div>
 
-          <img alt="2" src="images/2.png" />
+          <img alt="1" src={cpt} />
+          <br></br>
           <div className="content">
             <h1>
               Captions+Translation<br></br>+Proofreading
