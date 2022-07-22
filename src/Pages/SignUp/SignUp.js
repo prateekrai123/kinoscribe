@@ -41,7 +41,7 @@ const SignUp = (props) => {
       name: name,
       email: email,
       password: password,
-      phone: phoneNumber,
+      phone: 12,
     };
     axios
       .post(`${baseUrl}/auth/signUp`, data)
@@ -197,7 +197,7 @@ const SignUp = (props) => {
                     }}
                   />
                 </div>
-                <div className="signup-form-group">
+                {/* <div className="signup-form-group">
                   <input
                     className="signup-form-control"
                     placeholder="CONTACT NO"
@@ -207,7 +207,7 @@ const SignUp = (props) => {
                       handlePhoneNumber(e);
                     }}
                   />
-                </div>
+                </div> */}
                 <div className="signup-form-group buttons">
                   <button className="signup-form-button" onClick={handleSubmit}>
                     Sign Up

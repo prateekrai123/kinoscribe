@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import "./Footer.css";
 import logo from "../../Images/logo.png";
@@ -85,7 +86,9 @@ const Footer = () => {
               quickly get your films, videos, or text documents proofread,
               translated and captioned. A Kinoverse Corp service.<br></br>
               <br></br>
-              <a href="http://kinoverse.net/">Kinoverse Corp</a>
+              <a href="http://kinoverse.net/" target="_blank">
+                Kinoverse Corp
+              </a>
             </p>
           </section>
           {/* <section>
@@ -97,35 +100,56 @@ const Footer = () => {
               <li>Frameworks</li>
               <li>Templates</li>
             </ul>
-          </section>
-          <section>
-            <div class="title">Quick Links</div>
-            <ul>
-              <li>About Us</li>
-              <li>Contact Us</li>
-              <li>Contribute</li>
-              <li>Private Policy</li>
-              <li>Sitemap</li>
-            </ul>
           </section> */}
+          <section>
+            <ul>
+              {/* <li>About Us</li> */}
+              <a href="/contact" target="_blank">
+                Contact Us
+              </a>
+              <br></br>
+              <a href="/signin" target="_blank">
+                Login
+              </a>
+              <br></br>
+              {/* <li>Contribute</li> */}
+              <a href="https://kinoverse.net/privacy" target="_blank">
+                Private Policy
+              </a>
+              <br></br>
+              <a href="http://kinoverse.net/" target="_blank">
+                Company
+              </a>
+              {/* <li>Sitemap</li> */}
+            </ul>
+          </section>
         </div>
 
         <div class="foot-2">
-          <p>Copyright@KinoverseCorp</p>
+          <p>© 2022 Kinoverse Corp. All rights reserved.</p>
           <div class="socials">
-            <a href="https://instagram.com/kinoscribe?igshid=YmMyMTA2M2Y=">
+            <a
+              href="https://instagram.com/kinoscribe?igshid=YmMyMTA2M2Y="
+              target="_blank"
+            >
               {" "}
               <i class="fa-brands fa-instagram"></i>{" "}
             </a>
-            <a href="https://www.facebook.com/Kinoscribe-100393012769362/">
+            <a
+              href="https://www.facebook.com/Kinoscribe-100393012769362/"
+              target="_blank"
+            >
               {" "}
               <i class="fa-brands fa-facebook"></i>{" "}
             </a>
-            <a href="https://twitter.com/kinoscribe?t=J9crzrWD3vnWIcVAG8IL_w&s=09">
+            <a
+              href="https://twitter.com/kinoscribe?t=J9crzrWD3vnWIcVAG8IL_w&s=09"
+              target="_blank"
+            >
               {" "}
               <i class="fa-brands fa-twitter"></i>{" "}
             </a>
-            <a href="https://tiktok.com/@kinoscribe">
+            <a href="https://tiktok.com/@kinoscribe" target="_blank">
               {" "}
               <i class="fa-brands fa-tiktok"></i>{" "}
             </a>

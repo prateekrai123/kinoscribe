@@ -33,8 +33,15 @@ const Drawer = ({ isOpen, toggleDrawer, routes }) => {
               );
             })}
           </NavRoutes>
-          {(!localStorage.getItem("token")) && <LoginButton>Login</LoginButton>}
-          {localStorage.getItem("token") && <LogoutButton>Logout</LogoutButton>}
+          {(!localStorage.getItem("token")) && <LoginButton onClick={() => {
+            window.location.href = "/signin";
+          }}>Login</LoginButton>}
+          {localStorage.getItem("token") && <LogoutButton onClick={() => {
+            localStorage.removeItem("token")
+            localStorage.removeItem("userId")
+            localStorage.removeItem("isAdmin")
+            window.location.href = "/"
+          }}>Logout</LogoutButton>}
         </RightNav>
       </SDrawer>
     </>

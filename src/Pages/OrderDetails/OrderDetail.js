@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { useEffect, useState } from "react";
 import "./OrderDetail.css";
 import axios from "axios";
@@ -96,7 +97,10 @@ const OrderDetail = () => {
                 order.delieveredFile &&
                 order.paymentDetails &&
                 order.paymentDetails.paymentStatus === "succeeded" && (
-                  <a href={`${baseUrl}/profile/${order.delieveredFile}`}>
+                  <a
+                    href={`${baseUrl}/profile/${order.delieveredFile}`}
+                    target="_blank"
+                  >
                     {" "}
                     Download File
                   </a>

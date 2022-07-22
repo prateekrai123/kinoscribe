@@ -18,6 +18,10 @@ const Product = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmitClick = async () => {
+    if (!file || !title || !description || !price || !wordCount) {
+      alert("Please fill all the fields");
+      return;
+    }
     setIsLoading(true);
     const formData = new FormData();
     formData.append("file", file);
@@ -39,9 +43,10 @@ const Product = () => {
       .then((res) => {
         setIsLoading(false);
         if (res.data.isError) {
-          alert("Something went wrong");
+          alert("Some error occurred");
         } else {
           alert("Order Placed Successfully");
+          window.location.href = "/dashboard";
         }
       })
       .catch((err) => {

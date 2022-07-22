@@ -22,7 +22,6 @@ const ContactUs = () => {
                     type="text"
                     className="app-form-control"
                     placeholder="NAME"
-                    value=""
                   />
                 </div>
                 <div className="app-form-group">
