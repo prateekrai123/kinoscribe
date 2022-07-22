@@ -27,7 +27,7 @@ const OrderDetail = () => {
         alert("Error loading order");
       } else {
         setOrder(res.data.order);
-        if (order.paymentDetails.paymentStatus === "succeeded") {
+        if (order && order.paymentDetails.paymentStatus === "succeeded") {
           setPaid(true);
         }
       }
