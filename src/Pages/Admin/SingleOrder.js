@@ -32,7 +32,6 @@ const SingleOrder = () => {
     })
     .catch((err) => {
       console.log(err);
-      alert("Something went wrong");
     });
 
   const onSubmitClick = async () => {
