@@ -17,14 +17,12 @@ const SignIn = (props) => {
       .post(`${baseUrl}/auth/signIn`, { email, password })
       .then((res) => {
         setIsLoading(false);
-        console.log(res);
         if (res.data.isError) {
           alert(res.data.message);
           // userContext.loginHandler({
           //   token: res.data.token,
           //   isAdmin: res.data.isAdmin,
           // });
-          // console.log(userContext);
         } else {
           alert(res.data.message);
           localStorage.setItem("token", res.data.token);
@@ -34,7 +32,6 @@ const SignIn = (props) => {
       })
       .catch((err) => {
         setIsLoading(false);
-        console.log(err);
         alert(err);
       });
   };

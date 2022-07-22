@@ -24,7 +24,6 @@ const Dashboard = (props) => {
       .get(`${baseUrl}/user/user`, header)
       .then((res) => {
         if (!res.data.isError) {
-          console.log(res);
           setUser(res.data);
         } else {
           alert("Error while getting users");

@@ -23,15 +23,17 @@ const OrderDetail = () => {
   axios
     .post(`${baseUrl}/order/orderById`, data, header)
     .then((res) => {
-      setOrder(res.data.order);
-      if (order.paymentDetails.paymentStatus === "succeeded") {
-        setPaid(true);
+      if (res.data.isError) {
+        alert("Error loading order");
+      } else {
+        setOrder(res.data.order);
+        if (order.paymentDetails.paymentStatus === "succeeded") {
+          setPaid(true);
+        }
       }
-      console.log(paid);
-      console.log(order);
     })
     .catch((err) => {
-      console.log(err);
+      alert("Error loading order");
     });
 
   const onPayButtonClick = () => {

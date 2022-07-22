@@ -19,7 +19,6 @@ const VerifyUser = () => {
       .then((res) => {
         if (res.data.isError === true) {
           alert("Error");
-          console.log(res.data.message);
           setIsLoading(false);
         } else {
           alert("User verified");
@@ -28,7 +27,6 @@ const VerifyUser = () => {
         }
       })
       .catch((err) => {
-        console.log(err);
         alert("Error");
         setIsLoading(false);
       });

@@ -19,11 +19,13 @@ const AllPendingOrders = () => {
     axios
       .get(`${baseUrl}/order/allPendingOrders`, header)
       .then((res) => {
-        // console.log(res);
-        setPendingOrders(res.data);
+        if (res.data.isError) {
+          alert("Error loading orders");
+        } else {
+          setPendingOrders(res.data);
+        }
       })
       .catch((err) => {
-        console.log(err);
         alert("Something went wrong");
       });
   });

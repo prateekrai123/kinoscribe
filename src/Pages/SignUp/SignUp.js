@@ -32,7 +32,7 @@ const SignUp = (props) => {
 
   const handleSubmit = (e) => {
     if (password !== confPassword) {
-      console.log("password Not Match");
+      alert("password Not Match");
       return;
     }
     setIsLoading(true);
@@ -47,14 +47,16 @@ const SignUp = (props) => {
       .post(`${baseUrl}/auth/signUp`, data)
       .then((res) => {
         setIsLoading(false);
-        console.log(res);
-        alert("SignUp Successfully");
-        window.location.href = "/verify";
+        if (res.data.isError) {
+          alert("Something went wrong");
+        } else {
+          alert("SignUp Successfully");
+          window.location.href = "/verify";
+        }
       })
       .catch((err) => {
         setIsLoading(false);
         alert("SignUp Failed");
-        console.log(err);
       });
   };
 

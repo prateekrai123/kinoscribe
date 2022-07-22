@@ -38,8 +38,11 @@ const Product = () => {
       .post(`${baseUrl}/order/placeOrder`, formData, header)
       .then((res) => {
         setIsLoading(false);
-        console.log(res);
-        alert("Order Placed Successfully");
+        if (res.data.isError) {
+          alert("Something went wrong");
+        } else {
+          alert("Order Placed Successfully");
+        }
       })
       .catch((err) => {
         setIsLoading(false);
@@ -51,8 +54,11 @@ const Product = () => {
     axios
       .get(`${baseUrl}/service/getServiceByName?name=${query}`)
       .then((res) => {
-        // console.log(res);
-        setProduct(res.data);
+        if (res.data.isError) {
+          alert("Something went wrong");
+        } else {
+          setProduct(res.data);
+        }
       })
       .catch((err) => {
         alert(err.message);
@@ -126,7 +132,6 @@ const Product = () => {
                   type="file"
                   onChange={(e) => {
                     setFile(e.target.files[0]);
-                    console.log(file);
                   }}
                 ></input>
                 <br></br>

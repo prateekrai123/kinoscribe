@@ -9,7 +9,6 @@ import userContext from "../../context/UserContext";
 
 const Navbar = ({ toggleDrawer, routes }) => {
   const user = userContext
-  console.log(user)
 
   return (
     <SNavbar>
