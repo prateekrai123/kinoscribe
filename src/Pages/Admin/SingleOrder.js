@@ -9,6 +9,7 @@ const SingleOrder = () => {
 
   const [price, setPrice] = useState();
   const [file, setFile] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   const header = {
     headers: {
@@ -21,20 +22,18 @@ const SingleOrder = () => {
     id: id,
   };
 
-  useEffect(() => {
-    axios
-      .post(`${baseUrl}/order/orderById`, data, header)
-      .then((res) => {
-        if (res.data.isError) {
-          alert("Somenthing went wrong");
-
-          setOrder(res.data.order);
-        }
-      })
-      .catch((err) => {
-        alert("Something went wrong");
-      });
-  }, []);
+  axios
+    .post(`${baseUrl}/order/orderById`, data, header)
+    .then((res) => {
+      if (!res.data.isError) {
+        setOrder(res.data.order);
+        setIsLoading(false);
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      alert("Something went wrong");
+    });
 
   const onSubmitClick = async () => {
     const formData = new FormData();
@@ -67,73 +66,76 @@ const SingleOrder = () => {
     <>
       <div className="singleOrder-background">
         <div className="singleOrder-heading">
-          <h1>SingleOrder</h1>
+          <h1>Order Details</h1>
         </div>
-        <div className="singleOrder-flex-container">
-          <div className="singleOrder-flex">
-            <h2>
-              {order && order.title}
-              {/* Apple */}
-            </h2>
+        {isLoading && <h3 style={{ color: "#FFF" }}>Loading</h3>}
+        {!isLoading && (
+          <div className="singleOrder-flex-container">
+            <div className="singleOrder-flex">
+              <h2>
+                {order && order.title}
+                {/* Apple */}
+              </h2>
 
-            <br />
-            <h4>
-              {order && order.title}
-              {/* Title: Title */}
-            </h4>
-            <h4>
-              {order && order.serviceId}
-              {/* id: "g2" */}
-            </h4>
+              <br />
+              <h4>
+                {order && order.title}
+                {/* Title: Title */}
+              </h4>
+              <h4>
+                {order && order.serviceId}
+                {/* id: "g2" */}
+              </h4>
 
-            <br />
-            <p>
-              {order && order.description}
-              {/* Lorem ipsum svacca ffswaegfwqeF fqffqf Introducing the new MacBook
+              <br />
+              <p>
+                {order && order.description}
+                {/* Lorem ipsum svacca ffswaegfwqeF fqffqf Introducing the new MacBook
             Air & MacBook Pro 13", supercharged with the Apple M2 chip. Get 5%
             instant Cashback up to ₹6,000 with qualifying credit cards. Terms
             apply. Services: Apple Trade In, Shop with Specialists, Free
             delivery, EMI available. */}
-            </p>
+              </p>
 
-            <h4>
-              <a href={order && `${baseUrl}/profile/${order.file}`}>
-                {" "}
-                Download File
-              </a>
-            </h4>
+              <h4>
+                <a href={order && `${baseUrl}/profile/${order.file}`}>
+                  {" "}
+                  Download File
+                </a>
+              </h4>
 
-            <br />
-            <h4>
-              Price By User :-
-              {`  $${order && order.price}`}
-              {/* 22000 */}
-            </h4>
-            <input
-              className="singleOrder-form-control"
-              type="number"
-              placeholder="Set Price"
-              onChange={(e) => {
-                setPrice(e.target.value);
-              }}
-            ></input>
-            <br />
-            <br />
-            <input
-              className="singleOrder-form-control"
-              type="file"
-              style={{ width: "250px" }}
-              onChange={(e) => {
-                setFile(e.target.files[0]);
-              }}
-            ></input>
-            <br />
-            <br />
-            <button className="singleOrder-button" onClick={onSubmitClick}>
-              Submit
-            </button>
+              <br />
+              <h4>
+                Price By User :-
+                {`  $${order && order.price}`}
+                {/* 22000 */}
+              </h4>
+              <input
+                className="singleOrder-form-control"
+                type="number"
+                placeholder="Set Price"
+                onChange={(e) => {
+                  setPrice(e.target.value);
+                }}
+              ></input>
+              <br />
+              <br />
+              <input
+                className="singleOrder-form-control"
+                type="file"
+                style={{ width: "250px" }}
+                onChange={(e) => {
+                  setFile(e.target.files[0]);
+                }}
+              ></input>
+              <br />
+              <br />
+              <button className="singleOrder-button" onClick={onSubmitClick}>
+                Submit
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   );

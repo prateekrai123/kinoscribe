@@ -20,21 +20,28 @@ const OrderDetail = () => {
     id: id,
   };
 
-  axios
-    .post(`${baseUrl}/order/orderById`, data, header)
-    .then((res) => {
-      if (res.data.isError) {
-        alert("Error loading order");
-      } else {
-        setOrder(res.data.order);
-        if (order && order.paymentDetails.paymentStatus === "succeeded") {
-          setPaid(true);
+  setTimeout(() => {
+    axios
+      .post(`${baseUrl}/order/orderById`, data, header)
+      .then((res) => {
+        if (res.data.isError) {
+          alert("Error loading order");
+        } else {
+          setOrder(res.data.order);
+          if (order !== undefined) {
+            if (order.paymentDetails !== undefined) {
+              if (order.paymentDetails.paymentStatus === "succeeded") {
+                setPaid(true);
+              }
+            }
+          }
         }
-      }
-    })
-    .catch((err) => {
-      alert("Error loading order");
-    });
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("Error loading order");
+      });
+  }, 500);
 
   const onPayButtonClick = () => {
     const data = { orderId: order._id };
