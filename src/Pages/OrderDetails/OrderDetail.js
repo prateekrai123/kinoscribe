@@ -20,21 +20,19 @@ const OrderDetail = () => {
     id: id,
   };
 
-  useEffect(() => {
-    axios
-      .post(`${baseUrl}/order/orderById`, data, header)
-      .then((res) => {
-        setOrder(res.data.order);
-        if (order.paymentDetails.paymentStatus === "succeeded") {
-          setPaid(true);
-        }
-        console.log(paid);
-        console.log(order);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  axios
+    .post(`${baseUrl}/order/orderById`, data, header)
+    .then((res) => {
+      setOrder(res.data.order);
+      if (order.paymentDetails.paymentStatus === "succeeded") {
+        setPaid(true);
+      }
+      console.log(paid);
+      console.log(order);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 
   const onPayButtonClick = () => {
     const data = { orderId: order._id };
@@ -111,6 +109,8 @@ const OrderDetail = () => {
                 Pay
               </button>
             )}
+
+            {order && order.isCompleted && paid && <h4>Status : Paid</h4>}
           </div>
         </div>
       </div>
