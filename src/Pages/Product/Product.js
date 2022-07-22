@@ -43,7 +43,9 @@ const Product = () => {
       .then((res) => {
         setIsLoading(false);
         if (res.data.isError) {
-          alert("Some error occurred");
+          alert(
+            "You need to sign up and log in before an order can be placed "
+          );
         } else {
           alert("Order Placed Successfully");
           window.location.href = "/dashboard";
