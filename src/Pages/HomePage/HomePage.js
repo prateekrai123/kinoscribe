@@ -21,7 +21,7 @@ const HomePage = () => {
                 Kinoscribe offers competitive{" "}
                 <font color="#FFDD59">pay by the word</font> pricing which
                 allows you to save on money and still get your results in under
-                a day. Simple choose your package below, enter your estimated
+                a day. Simply choose your package below, enter your estimated
                 word count, submit your files and we will handle it from there.
               </p>
               <div className="home-form-group buttons">
